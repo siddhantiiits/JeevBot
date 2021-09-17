@@ -11,9 +11,11 @@ app = Flask(__name__)
 l=[]
 @app.route('/bot', methods=['POST'])
 def bot():
-    incoming_msg = request.values.get('Body', '').lower()
+    incoming_msg = request.values.get('Body','').lower()
     resp = MessagingResponse()
+
     msg = resp.message()
+
     if incoming_msg == 'home':
         l.clear()
 
@@ -42,6 +44,7 @@ def bot():
     msg.body(r)
     if incoming_msg:
         l.append(incoming_msg)
+
     return str(resp)
 
 
