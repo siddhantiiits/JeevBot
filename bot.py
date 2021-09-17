@@ -7,16 +7,17 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 
 app = Flask(__name__)
-
+#
 l=[]
 @app.route('/bot', methods=['POST'])
 def bot():
+
     incoming_msg = request.values.get('Body','').lower()
     resp = MessagingResponse()
 
     msg = resp.message()
 
-    if incoming_msg == 'home':
+    if incoming_msg in ('home' , 'hi'):
         l.clear()
 
 
@@ -33,6 +34,7 @@ def bot():
         if l[1] =='1':
             if incoming_msg == '1':
                 r = 'Help is on the way'
+
             elif incoming_msg =='2':
                 r = "Disease help is on the way"
         if l[1] == '2':
@@ -42,13 +44,12 @@ def bot():
 
 
     msg.body(r)
+    # msg.media('https://user-images.githubusercontent.com/34777376/77290801-f2421280-6d02-11ea-8b08-fdb516af3d5a.jpeg')
     if incoming_msg:
         l.append(incoming_msg)
 
     return str(resp)
 
 
-
-
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
