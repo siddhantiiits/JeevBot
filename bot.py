@@ -31,7 +31,7 @@ def bot():
     # if not Dict[phone_num] and incoming_msg:
     #     r = 'Hey! How can I help you today ? \n1) Help \n2) Vet Call'
 
-    if len(Dict[phone_num]) == 1 :
+    elif len(Dict[phone_num]) == 1 :
         if incoming_msg == '1':
             r = 'What kind of help do you want ?\n*1)* General Help \n*2)* Disease Related Help '
         elif incoming_msg =='2':
