@@ -38,13 +38,14 @@ def bot():
             r = 'Please Enter your pincode '
     elif len(Dict[phone_num])==2:
         print(l)
-        if Dict[phone_num][1] =='1':
-            if incoming_msg == '1':
-                r = 'Help is on the way'
-            elif incoming_msg =='2':
-                r = "Disease help is on the way"
+        if Dict[phone_num][1] =='1' and incoming_msg=='1':
+            r = 'Help is on the way'
+        elif Dict[phone_num][1] =='1' and incoming_msg=='2':
+            r = "Disease help is on the way"
         elif Dict[phone_num][1] == '2':
             r = 'Thanks we have recieved your pincode:' + incoming_msg
+    else:
+        r = 'Give a valid input please! 🥺'
 
 
 
