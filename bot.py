@@ -16,10 +16,10 @@ welcomemsg22='Disease help is on the way'
 listt = [welcomemsg01,
             [welcomemsg11,
                 [welcomemsg21
-                ]
+                ],
                 [welcomemsg22
                 ]
-            ]
+            ],
             [welcomemsg12,
                 [
                 ]
