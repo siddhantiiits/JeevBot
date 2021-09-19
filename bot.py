@@ -45,7 +45,7 @@ Dict={}
 stream=listt
 @app.route('/bot', methods=['POST'])
 def bot():
-
+    print(Dict)
     incoming_msg = request.values.get('Body','').lower()
     phone_num = request.values.get('From','').lower()
     if phone_num in Dict:
