@@ -26,14 +26,14 @@ listt = [welcomemsg01,
             ]
         ]
 
-def func(str):
-    if(len(str)==6):
-        return int(str)
-    else if(len(str)!=1):
+def func(s):
+    if(len(s)==6):
+        return int(s)
+    elif(len(s)!=1):
         return -1
-    else if(str[0]=='1'):
+    elif(s[0]=='1'):
         return 1
-    else if(str[0]=='2'):
+    elif(s[0]=='2'):
         return 2
 
 
