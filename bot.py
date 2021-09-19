@@ -59,7 +59,8 @@ def bot():
 
     
 
-    int i = func(incoming_msg)
+    i = func(incoming_msg)
+    
     if(i==-1):
         if incoming_msg in ('home' , 'hi'):
             r=Dict[phone_num][0]
