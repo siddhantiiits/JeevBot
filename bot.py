@@ -13,18 +13,18 @@ welcomemsg12='Please Enter your pincode '
 welcomemsg21='Help is on the way'
 welcomemsg22='Disease help is on the way'
 
-listt = [welcomemsg01,
-            [welcomemsg11,
-                [welcomemsg21
-                ],
-                [welcomemsg22
-                ]
-            ],
-            [welcomemsg12,
-                [
-                ]
-            ]
-        ]
+listt = (welcomemsg01,
+         (welcomemsg11,
+          (welcomemsg21
+           ),
+          (welcomemsg22
+           )
+          ),
+         (welcomemsg12,
+          (
+          )
+          )
+         )
 
 def func(s):
     if(len(s)==6):
