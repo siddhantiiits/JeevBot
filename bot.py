@@ -64,7 +64,7 @@ def bot():
     if(i==-1):
         if incoming_msg in ('home' , 'hi'):
             r=Dict[phone_num][0]
-    elif(len(i)==1):
+    elif(len(str(i))==1):
         Dict[phone_num]=Dict[phone_num][i]
         r=Dict[phone_num][0]
 
