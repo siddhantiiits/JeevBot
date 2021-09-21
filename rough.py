@@ -1,5 +1,8 @@
 d = {}
-for x in range(1,5000000):
-    d[x] = x
-
-print(len(d))
+d['1'] = []
+d['2'] = []
+d['1'].append('1')
+d['2'].append('1')
+d['2'].append('1')
+d['2'].append('1')
+print(d)
