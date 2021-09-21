@@ -9,6 +9,7 @@ app = Flask(__name__)
 #
 l=[]
 Dict={}
+
 @app.route('/bot', methods=['POST'])
 def bot():
 
@@ -52,10 +53,14 @@ def bot():
 
 
     msg.body(r)
+
     # msg.media('https://user-images.githubusercontent.com/34777376/77290801-f2421280-6d02-11ea-8b08-fdb516af3d5a.jpeg')
+    print("Value before appending")
+    print(Dict)
     if incoming_msg:
         Dict[phone_num].append(incoming_msg)
 
+    print("Value after appending")
     print('--------\n\nDict is ')
     print(Dict)
     print('\n\n--------\nDict value for phone num ')
