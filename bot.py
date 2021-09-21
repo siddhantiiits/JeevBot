@@ -103,6 +103,7 @@ def bot():
     # msg.media('https://user-images.githubusercontent.com/34777376/77290801-f2421280-6d02-11ea-8b08-fdb516af3d5a.jpeg')
     if incoming_msg:
         Dict[phone_num].append(incoming_msg)
+    print(Dict)
 
 
     return str(resp)
