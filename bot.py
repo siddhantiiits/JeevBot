@@ -72,7 +72,7 @@ def bot():
     #     r=Dict[phone_num][0]
 
 
-    if incoming_msg in ('home' , 'hi'):
+    if incoming_msg in ('home' , 'hi','Home','Hi'):
         Dict[phone_num].clear()
         r = 'Hey! How can I help you today ? \n1) Help \n2) Vet Call'
 
