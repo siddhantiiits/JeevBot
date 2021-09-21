@@ -24,7 +24,8 @@ def bot():
     msg = resp.message()
 
     if incoming_msg in ('home' , 'hi'):
-        Dict[phone_num].clear()
+        # Dict[phone_num].clear()
+        Dict[phone_num]=[]
         r = 'Hey! How can I help you today ? \n1) Help \n2) Vet Call'
 
 
@@ -37,7 +38,7 @@ def bot():
         elif incoming_msg =='2':
             r = 'Please Enter your pincode '
     elif len(Dict[phone_num])==2:
-        print(l)
+        # print(l)
         if Dict[phone_num][1] =='1' and incoming_msg=='1':
             r = 'Help is on the way'
         elif Dict[phone_num][1] =='1' and incoming_msg=='2':
@@ -54,6 +55,11 @@ def bot():
     # msg.media('https://user-images.githubusercontent.com/34777376/77290801-f2421280-6d02-11ea-8b08-fdb516af3d5a.jpeg')
     if incoming_msg:
         Dict[phone_num].append(incoming_msg)
+
+    print('--------\n\nDict is ')
+    print(Dict)
+    print('\n\n--------\nDict value for phone num ')
+    print(Dict[phone_num])
 
     return str(resp)
 
