@@ -1,17 +1,23 @@
 from flask import Flask, request
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
-
+import pickle
 
 
 
 app = Flask(__name__)
 #
-l=[]
-Dict={}
+# l=[]
+# Dict={}
 
 @app.route('/bot', methods=['POST'])
 def bot():
+    # Open the file in binary mode
+    with open('file.pkl', 'rb') as file:
+        # Call load method to deserialze
+        Dict = pickle.load(file)
+
+
 
     incoming_msg = request.values.get('Body','').lower()
     phone_num = request.values.get('From','').lower()
@@ -59,6 +65,10 @@ def bot():
     print(Dict)
     if incoming_msg:
         Dict[phone_num].append(incoming_msg)
+        with open('file.pkl', 'wb') as file:
+            # A new file will be created
+            pickle.dump(Dict, file)
+            print("Dumped")
 
     print("Value after appending")
     print('--------\n\nDict is ')
