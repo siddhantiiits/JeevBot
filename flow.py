@@ -1,6 +1,7 @@
 # l is the list corresponding to Dict[phone_num]
 # incomingMsg is the incoming_msg
 def process(l,incomingMsg):
+    print(l)
     l.append(incomingMsg)
 
     if len(l) == 1:
