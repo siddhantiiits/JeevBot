@@ -31,6 +31,8 @@ def bot():
     resp = MessagingResponse()
     msg = resp.message()
 
+    print(incoming_msg)
+
     if incoming_msg == 'ClearDump':
         r = emptyDictFile()
         msg.body(r)
