@@ -32,6 +32,7 @@ def bot():
     msg = resp.message()
 
     print(incoming_msg)
+    print(Dict)
 
     if incoming_msg == 'cleardump':
         r = emptyDictFile()
@@ -54,6 +55,7 @@ def bot():
         # A new file will be created
         pickle.dump(Dict, file)
         print("Dumped")
+        print(Dict)
 
 
 
