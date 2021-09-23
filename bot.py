@@ -33,7 +33,7 @@ def bot():
 
     print(incoming_msg)
 
-    if incoming_msg == 'ClearDump':
+    if incoming_msg == 'cleardump':
         r = emptyDictFile()
         msg.body(r)
         return str(resp)
