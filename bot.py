@@ -3,6 +3,7 @@ import requests
 from twilio.twiml.messaging_response import MessagingResponse
 import pickle
 from flow import process
+from varDump import emptyDictFile
 
 
 
@@ -30,8 +31,15 @@ def bot():
     resp = MessagingResponse()
     msg = resp.message()
 
+    if incoming_msg == 'ClearDump':
+        r = emptyDictFile()
+        msg.body(r)
+        return str(resp)
+
+
 
     # print(Dict[phone_num])
+
     r = process(Dict[phone_num],incoming_msg)
     # print(Dict[phone_num])
 
