@@ -43,12 +43,12 @@ def bot():
 
     # print(Dict[phone_num])
 
-    r = process(Dict[phone_num],incoming_msg)
+    r,m = process(Dict[phone_num],incoming_msg)
     # print(Dict[phone_num])
 
     msg.body(r)
 
-    # msg.media('https://user-images.githubusercontent.com/34777376/77290801-f2421280-6d02-11ea-8b08-fdb516af3d5a.jpeg')
+    msg.media(m)
 
 
     with open('file.pkl', 'wb') as file:
