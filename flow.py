@@ -95,7 +95,7 @@ def process(l,incomingMsg):
 
     elif l[1:] == ['1','1','1']:
         r = 'Here\'s the vaccination chart for your dog ! 🎉\n\n' \
-            'Nearest Vaccination Centers - *Feature Comint Soon*'
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*'
         m = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
         mediaFlag = 1
 
