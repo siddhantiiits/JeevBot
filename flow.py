@@ -5,6 +5,7 @@ suffix = '\nSelect from the above options by typing number corresponding to the 
 
 def process(l,incomingMsg):
     m = ''
+    mediaFlag = 0
     # print(l)
     l.append(incomingMsg)
     # print(l)
@@ -96,6 +97,7 @@ def process(l,incomingMsg):
         r = 'Here\'s the vaccination chart for your dog ! 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Comint Soon*'
         m = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
+        mediaFlag = 1
 
 
 
@@ -110,7 +112,7 @@ def process(l,incomingMsg):
 
 
     r = r+suffix
-    return r,m
+    return r,m,mediaFlag
 
 
 

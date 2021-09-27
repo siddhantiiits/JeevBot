@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 @app.route('/bot', methods=['POST'])
 def bot():
-    m = ''
+
     # Open the file in binary mode
     with open('file.pkl', 'rb') as file:
         # Call load method to deserialze
@@ -44,12 +44,14 @@ def bot():
 
     # print(Dict[phone_num])
 
-    r,m = process(Dict[phone_num],incoming_msg)
+    r,m,mediaFlag = process(Dict[phone_num],incoming_msg)
     # print(Dict[phone_num])
+    if mediaFlag==0:
+        msg.body(r)
 
-    msg.body(r)
-
-    msg.media(m)
+    else:
+        msg.body(r)
+        msg.media(m)
 
 
     with open('file.pkl', 'wb') as file:
