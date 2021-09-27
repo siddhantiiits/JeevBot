@@ -14,6 +14,7 @@ app = Flask(__name__)
 
 @app.route('/bot', methods=['POST'])
 def bot():
+    m = ''
     # Open the file in binary mode
     with open('file.pkl', 'rb') as file:
         # Call load method to deserialze
