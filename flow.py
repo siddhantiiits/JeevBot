@@ -2,8 +2,9 @@
 # incomingMsg is the incoming_msg
 
 suffix = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
-m = ''
+
 def process(l,incomingMsg):
+    m = ''
     # print(l)
     l.append(incomingMsg)
     # print(l)
