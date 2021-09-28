@@ -3,8 +3,8 @@ from englisttohindi.englisttohindi import EngtoHindi
 # incomingMsg is the incoming_msg
 def e2h(message):
     res = EngtoHindi(message)
-    r = res.convert
-    return r
+    p = res.convert
+    return p
 
 suffix = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
 

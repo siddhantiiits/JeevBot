@@ -5,9 +5,11 @@ from englisttohindi.englisttohindi import EngtoHindi
 
 def e2h(message):
     res = EngtoHindi(message)
-    r = res.convert
-    return r
+    p = res.convert
+    return p
+
+r = 'hello'
 
 # displaying the translation
-print(e2h('hello'))
+print(e2h(r))
 
