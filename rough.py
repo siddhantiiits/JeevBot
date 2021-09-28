@@ -1,6 +1,13 @@
-l=[1]
-if len(l) == 1:
-    r = 'Hey! Am Nandi, how can I help you ? May I first know who\'s on the other side\n' \
-        'lalala'
-    
-print(r)
+# importing the module
+from englisttohindi.englisttohindi import EngtoHindi
+
+
+
+def e2h(message):
+    res = EngtoHindi(message)
+    r = res.convert
+    return r
+
+# displaying the translation
+print(e2h('hello'))
+

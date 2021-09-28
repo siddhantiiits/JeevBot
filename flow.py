@@ -1,5 +1,10 @@
+from englisttohindi.englisttohindi import EngtoHindi
 # l is the list corresponding to Dict[phone_num]
 # incomingMsg is the incoming_msg
+def e2h(message):
+    res = EngtoHindi(message)
+    r = res.convert
+    return r
 
 suffix = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
 
