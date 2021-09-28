@@ -15,9 +15,9 @@ def process(l,incomingMsg):
     l.append(incomingMsg)
     # print(l)
 
-    if incomingMsg == 'home':
+    if incomingMsg == 'home' or incomingMsg == 'hi':
         l.clear()
-        l.append('hi')
+        l.append('hin')
     elif len(l) > 2 and incomingMsg == 'back':
         l.pop()
         l.pop()
@@ -117,6 +117,9 @@ def process(l,incomingMsg):
 
 
     r = r+suffix
+    if l[0]=='hin':
+        r=e2h(r);
+
     return r,m,mediaFlag
 
 
