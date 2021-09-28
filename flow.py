@@ -117,8 +117,9 @@ def process(l,incomingMsg):
 
 
     r = r+suffix
+
     if l[0]=='hin':
-        r=e2h(r);
+        r=e2h(r)
 
     return r,m,mediaFlag
 
