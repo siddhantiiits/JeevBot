@@ -12,10 +12,13 @@ def process(l,incomingMsg):
     m = ''
     mediaFlag = 0
     # print(l)
-    l.append(incomingMsg)
+    if l == []:
+        l.append('hin')
+    else:
+        l.append(incomingMsg)
     # print(l)
 
-    if incomingMsg == 'home' or incomingMsg == 'hi':
+    if incomingMsg == 'home':
         l.clear()
         l.append('hin')
     elif len(l) > 2 and incomingMsg == 'back':
