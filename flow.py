@@ -136,8 +136,8 @@ def process(l,incomingMsg):
     elif l[1:] == ['1','4']:
         r = 'What service / info do you want for your Guinea Pig? 🐭\n\n' \
             'Please choose from the following options: \n\n' \
-            '*3.* Feed 🍲\n' \
-            '*6.* FAQs ❓\n' \
+            '*1.* Feed 🍲\n' \
+            '*2.* FAQs ❓\n' \
 
     elif l[1:] == ['2','1']:
         r = 'What service / info do you want for your Cattle / Buffalo? 🐄\n\n' \
@@ -252,7 +252,7 @@ def process(l,incomingMsg):
     else:
         r = 'Give a valid input please! 🥺'
         l.pop()
-        return r
+        return r,0,''
 
 
 
