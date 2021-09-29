@@ -9,7 +9,7 @@ def e2h(message):
 suffix = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
 
 def process(l,incomingMsg):
-    m = ''
+    mediaLink = ''
     mediaFlag = 0
     # print(l)
     if l == []:
@@ -227,19 +227,19 @@ def process(l,incomingMsg):
     elif l[1:] == ['1','1','1']:
         r = 'Here\'s the vaccination chart for your dog ! 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*'
-        m = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
         mediaFlag = 1
 
     elif l[1:] == ['1','2','1']:
         r = 'Here\'s the vaccination chart for your cat ! 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*'
-        m = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
         mediaFlag = 1
 
     elif l[1:] == ['1','3','1']:
         r = 'Here\'s the vaccination chart for your Rabbit ! 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*'
-        m = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
         mediaFlag = 1
 
     
@@ -252,7 +252,7 @@ def process(l,incomingMsg):
     else:
         r = 'Give a valid input please! 🥺'
         l.pop()
-        return r,0,''
+        return r,'',0
 
 
 
@@ -261,7 +261,7 @@ def process(l,incomingMsg):
     # if l[0]=='hin':
     #     r=e2h(r)
 
-    return r,m,mediaFlag
+    return r,mediaLink,mediaFlag
 
 
 
