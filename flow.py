@@ -1,14 +1,12 @@
-from englisttohindi.englisttohindi import EngtoHindi
+import requests
+import os
 # l is the list corresponding to Dict[phone_num]
 # incomingMsg is the incoming_msg
-def e2h(message):
-    res = EngtoHindi(message)
-    p = res.convert
-    return p
+
 
 suffix = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
 
-def process(l,incomingMsg):
+def process(l,incomingMsg,mediaurl):
     mediaLink = ''
     mediaFlag = 0
     # print(l)
@@ -216,6 +214,36 @@ def process(l,incomingMsg):
             '*3.* Kisan Mitr \n' \
             '*4.* Farmer Portal of India \n' \
             '*5.* DAHD \n' \
+
+    elif l[1:] == ['6','4']:
+        print('lolo')
+        if mediaurl:
+            print('hiii')
+            r = requests.get(mediaurl)
+            content_type = r.headers['Content-Type']
+            username = 'user'
+            message = 'pp'
+            if content_type == 'image/jpeg':
+                filename = f'uploads/{username}/{message}.jpg'
+            elif content_type == 'image/png':
+                filename = f'uploads/{username}/{message}.png'
+            elif content_type == 'image/gif':
+                filename = f'uploads/{username}/{message}.gif'
+            else:
+                filename = None
+            if filename:
+                if not os.path.exists(f'uploads/{username}'):
+                    os.mkdir(f'uploads/{username}')
+                with open(filename, 'wb') as f:
+                    print(r.content)
+                    f.write(r.content)
+                    print("Done")
+                r = "Thankyou! Your image is recieved and we are working on it!"
+            else:
+                r = 'The file that you submitted is not a supported image type.'
+        else:
+            r = 'Please send an image!'
+
 
 
     # ----------------- Level 2 - End ---------------------

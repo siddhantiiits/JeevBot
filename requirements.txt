@@ -2,3 +2,5 @@ Flask==1.1.2
 gunicorn==20.0.4
 twilio==6.63.2
 englisttohindi==4.1.0
+requests==2.22.0
+firebase_admin==4.3.0
