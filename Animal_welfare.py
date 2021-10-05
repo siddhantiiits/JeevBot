@@ -27,7 +27,7 @@ def animalWelfare(mediaUrl, imageDescription, userPhoneNumber, userName, pincode
     doc_ref.add({'Name':userName,'User Phone Number':userPhoneNumber,'Image URL': link,'Image Description':imageDescription ,
                  'Pincode':pincode, 'Location X-Coordinate':location[0],'Location Y-Coordinate':location[1]})
 
-    return 'Thanks for sharing with us, we are working on the same. The Image you uploaded is available at: '+blob.public_url + '\n'
+    return 'Thanks for sharing with us, we are working on the same and trying to help ASAP. The Image you uploaded is available at: '+blob.public_url + '\n\n'
 
 
 

@@ -1,6 +1,7 @@
 import requests
 import os
 import Registrations
+import Animal_welfare
 # l is the list corresponding to Dict[phone_num]
 # incomingMsg is the incoming_msg
 
@@ -8,14 +9,18 @@ import Registrations
 
 suffix = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
 
-def process(l,incomingMsg,mediaurl):
+def process(l,incomingMsg,mediaurl,phonenum):
     mediaLink = ''
     mediaFlag = 0
     # print(l)
-    if l == []:
-        l.append('hin')
+    if incomingMsg:
+        if l == []:
+            l.append('hin')
+        else:
+            l.append(incomingMsg)
     else:
-        l.append(incomingMsg)
+        if mediaurl:
+            l.append(mediaurl)
     # print(l)
 
     if incomingMsg == 'home':
@@ -238,33 +243,44 @@ def process(l,incomingMsg,mediaurl):
             '*5.* DAHD \n' \
 
     elif l[1:] == ['6','4']:
-        print('lolo')
-        if mediaurl:
-            print('hiii')
-            r = requests.get(mediaurl)
-            content_type = r.headers['Content-Type']
-            username = 'user'
-            message = 'pp'
-            if content_type == 'image/jpeg':
-                filename = f'uploads/{username}/{message}.jpg'
-            elif content_type == 'image/png':
-                filename = f'uploads/{username}/{message}.png'
-            elif content_type == 'image/gif':
-                filename = f'uploads/{username}/{message}.gif'
-            else:
-                filename = None
-            if filename:
-                if not os.path.exists(f'uploads/{username}'):
-                    os.mkdir(f'uploads/{username}')
-                with open(filename, 'wb') as f:
-                    print(r.content)
-                    f.write(r.content)
-                    print("Done")
-                r = "Thankyou! Your image is recieved and we are working on it!"
-            else:
-                r = 'The file that you submitted is not a supported image type.'
-        else:
-            r = 'Please send an image!'
+        r= "Send us an image depicting Animal abuse/ anti- animal welfare. \n\n"
+    elif l[1:3] == ['6', '4'] and len(l) == 4:
+        r = "Thanks! Write a short description for the image you sent."
+    elif l[1:3] == ['6', '4'] and len(l) == 5:
+        r = "Share the exact location of site, or type in exact address of site with pincode."
+    elif l[1:3] == ['6', '4'] and len(l) == 6:
+        r = Animal_welfare.animalWelfare(l[3],l[4],phonenum,'Test XYZ',l[5])
+
+
+
+
+        # print('lolo')
+        # if mediaurl:
+        #     print('hiii')
+        #     r = requests.get(mediaurl)
+        #     content_type = r.headers['Content-Type']
+        #     username = 'user'
+        #     message = 'pp'
+        #     if content_type == 'image/jpeg':
+        #         filename = f'uploads/{username}/{message}.jpg'
+        #     elif content_type == 'image/png':
+        #         filename = f'uploads/{username}/{message}.png'
+        #     elif content_type == 'image/gif':
+        #         filename = f'uploads/{username}/{message}.gif'
+        #     else:
+        #         filename = None
+        #     if filename:
+        #         if not os.path.exists(f'uploads/{username}'):
+        #             os.mkdir(f'uploads/{username}')
+        #         with open(filename, 'wb') as f:
+        #             print(r.content)
+        #             f.write(r.content)
+        #             print("Done")
+        #         r = "Thankyou! Your image is recieved and we are working on it!"
+        #     else:
+        #         r = 'The file that you submitted is not a supported image type.'
+        # else:
+        #     r = 'Please send an image!'
 
 
 
