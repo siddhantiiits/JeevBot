@@ -1,7 +1,9 @@
 import requests
 import os
+import Registrations
 # l is the list corresponding to Dict[phone_num]
 # incomingMsg is the incoming_msg
+
 
 
 suffix = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
@@ -206,6 +208,26 @@ def process(l,incomingMsg,mediaurl):
             '*3.* Feed 🍲\n' \
             '*4.* Immunity and Health Boosters 🍶\n' \
 
+    elif l[1:] == ['4','1']:
+        r = 'To get yourself registered as a veterinarian, fill the form {form link} or you can register by ' \
+            'sending your details in this format: \n\n' \
+            'Your Name\n' \
+            'Registration Number\n' \
+            'Phone Number\n' \
+            'Address\n' \
+            'City\n' \
+            'State\n' \
+            'Pincode\n\n' \
+            'For Example: \n' \
+            '*Sherlock Holmes*\n' \
+            '*PCVET54YZ3498*\n' \
+            '*+9120392949393*\n' \
+            '*221 Bakers Street*\n' \
+            '*Mumbai*\n' \
+            '*Maharashtra*\n' \
+            '*123456*\n\n' \
+
+
     elif l[1:] == ['6','5']:
         r = 'What E-Platform do you want to try? \n\n' \
             'Please choose from the following options: \n\n' \
@@ -269,6 +291,12 @@ def process(l,incomingMsg,mediaurl):
             'Nearest Vaccination Centers - *Feature Coming Soon\n*'
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
         mediaFlag = 1
+
+    elif l[1:-1] == ['4','1']:
+        name,registration_number,phone_number,address,city,state,pincode = map(str,input().split('\n'))
+        r = Registrations.registerVeterinarian(name,registration_number,phone_number,address,city,state,pincode)
+
+
 
     
 
