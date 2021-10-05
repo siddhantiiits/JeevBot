@@ -10,6 +10,7 @@ import Animal_welfare
 suffix = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
 
 def process(l,incomingMsg,mediaurl,phonenum):
+    suffixFlag = True
     mediaLink = ''
     mediaFlag = 0
     # print(l)
@@ -242,14 +243,23 @@ def process(l,incomingMsg,mediaurl,phonenum):
             '*4.* Farmer Portal of India \n' \
             '*5.* DAHD \n' \
 
+    # -------------------------Animal Welfare----------------------------
+
     elif l[1:] == ['6','4']:
-        r= "Send us an image depicting Animal abuse/ anti- animal welfare. \n\n"
+        r= "*Send us an image depicting Animal abuse/ anti- animal welfare.* \n\n"
+        suffixFlag = False
     elif l[1:3] == ['6', '4'] and len(l) == 4:
-        r = "Thanks! Write a short description for the image you sent."
+        r = "*Thanks! Write a short description for the image you sent.*"
+        suffixFlag = False
     elif l[1:3] == ['6', '4'] and len(l) == 5:
         r = "Share the exact location of site, or type in exact address of site with pincode."
+        suffixFlag = False
     elif l[1:3] == ['6', '4'] and len(l) == 6:
+        print(l[5])
         r = Animal_welfare.animalWelfare(l[3],l[4],phonenum,'Test XYZ',l[5],l[5])
+        suffixFlag = False
+
+    # -------------------------Animal Welfare----------------------------
 
 
 
@@ -308,11 +318,14 @@ def process(l,incomingMsg,mediaurl,phonenum):
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
         mediaFlag = 1
 
+
     elif l[1:-1] == ['4','1']:
         print(l[-1])
 
         name,registration_number,phone_number,address,city,state,pincode = map(str,l[-1].split('\n'))
         r = Registrations.registerVeterinarian(name,registration_number,phone_number,address,city,state,pincode)
+        suffixFlag = False
+
 
 
 
@@ -329,8 +342,10 @@ def process(l,incomingMsg,mediaurl,phonenum):
         return r,'',0
 
 
+    if suffixFlag:
+        r += suffix
 
-    r = r+suffix
+
 
     # if l[0]=='hin':
     #     r=e2h(r)
