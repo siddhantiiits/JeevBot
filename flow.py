@@ -249,7 +249,7 @@ def process(l,incomingMsg,mediaurl,phonenum):
     elif l[1:3] == ['6', '4'] and len(l) == 5:
         r = "Share the exact location of site, or type in exact address of site with pincode."
     elif l[1:3] == ['6', '4'] and len(l) == 6:
-        r = Animal_welfare.animalWelfare(l[3],l[4],phonenum,'Test XYZ',l[5])
+        r = Animal_welfare.animalWelfare(l[3],l[4],phonenum,'Test XYZ',l[5],l[5])
 
 
 
