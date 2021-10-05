@@ -293,7 +293,9 @@ def process(l,incomingMsg,mediaurl):
         mediaFlag = 1
 
     elif l[1:-1] == ['4','1']:
-        name,registration_number,phone_number,address,city,state,pincode = map(str,input().split('\n'))
+        print(l[-1])
+
+        name,registration_number,phone_number,address,city,state,pincode = map(str,l[-1].split('\n'))
         r = Registrations.registerVeterinarian(name,registration_number,phone_number,address,city,state,pincode)
 
 
