@@ -6,6 +6,7 @@ from firebase_admin import credentials, initialize_app, storage, firestore
 def animalWelfare(mediaUrl, imageDescription, userPhoneNumber, userName, pincode, location ):
     res = requests.get(mediaUrl)
     res = res.content
+    print(res)
 
     cred = credentials.Certificate("nandi-2adc2-firebase-adminsdk-4gdo7-2838d71565.json")
     initialize_app(cred, {'storageBucket': 'nandi-2adc2.appspot.com'})
