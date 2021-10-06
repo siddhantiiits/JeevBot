@@ -21,7 +21,9 @@ def bot():
         Dict = pickle.load(file)
 
 
-
+    print(request)
+    print("----")
+    print(request.values)
     incoming_msg = request.values.get('Body','').lower()
     phone_num = request.values.get('From','').lower()
     # userName = request.values.get()
