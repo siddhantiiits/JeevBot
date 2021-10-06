@@ -1,11 +1,28 @@
 import requests
 import firebase_admin
 import google.cloud
+import urllib
+
+
+
 from firebase_admin import credentials, initialize_app, storage, firestore
 
 def animalWelfare(mediaUrl, imageDescription, userPhoneNumber, userName, pincode, location ):
+    print(mediaUrl)
+    # headers = {'Content-type': 'content_type_value'}
+
+    req = urllib.request.Request(mediaUrl, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
+    r = urllib.request.urlopen(req)
+    h = r.getheader('Content-Type')
+    # print(h)
+    type = h.split('/')
+    content_ext = type[1]
+    content_type = type[0]
     res = requests.get(mediaUrl)
+    # print(res)
     res = res.content
+    # print(res)
+
     # print(res)
 
     cred = credentials.Certificate("nandi-2adc2-firebase-adminsdk-4gdo7-2838d71565.json")
@@ -14,14 +31,19 @@ def animalWelfare(mediaUrl, imageDescription, userPhoneNumber, userName, pincode
 
     # Put your local file path
 
+
+
     bucket = storage.bucket()
-    blob = bucket.blob(userPhoneNumber+'_'+imageDescription)
+    blob = bucket.blob(userPhoneNumber+'_'+imageDescription+'.'+content_ext)
     blob.upload_from_string(res)
+
+    print(content_ext)
 
 
     # Opt : if you want to make public access from the URL
     blob.make_public()
-    link = blob.public_url  #image uploaded to firebase storage and link to image stored in 'link'
+    link = blob.public_url #image uploaded to firebase storage and link to image stored in 'link'
+    print(link)
 
 
     store = firestore.client()
@@ -30,7 +52,7 @@ def animalWelfare(mediaUrl, imageDescription, userPhoneNumber, userName, pincode
     doc_ref.add({'Name':userName,'User Phone Number':userPhoneNumber,'Image URL': link,'Image Description':imageDescription ,
                  'Pincode':pincode, 'Location X-Coordinate':location[0],'Location Y-Coordinate':location[1]})
 
-    return 'Thanks for sharing with us, we are working on the same and trying to help ASAP. The Image you uploaded is available at: '+blob.public_url + '\n\n'
+    return 'Thanks for sharing with us, we are working on the same and trying to help ASAP. The '+content_type+' you uploaded is available at: '+blob.public_url + '\n\n'
 
 
 
