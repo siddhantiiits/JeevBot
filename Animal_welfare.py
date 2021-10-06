@@ -16,6 +16,7 @@ def animalWelfare(mediaUrl, imageDescription, userPhoneNumber, userName, pincode
     blob = bucket.blob(userPhoneNumber+'_'+imageDescription)
     blob.upload_from_string(res)
 
+
     # Opt : if you want to make public access from the URL
     blob.make_public()
     link = blob.public_url  #image uploaded to firebase storage and link to image stored in 'link'

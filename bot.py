@@ -26,7 +26,7 @@ def bot():
     print(request.values)
     incoming_msg = request.values.get('Body','').lower()
     phone_num = request.values.get('From','').lower()
-    # userName = request.values.get()
+    userName = request.values.get('ProfileName','').lower()
     media_url = request.form.get('MediaUrl0')
     if phone_num in Dict:
         print("Already in dict")
@@ -71,7 +71,7 @@ def bot():
 
     # print(Dict[phone_num])
 
-    r,m,mediaFlag = process(Dict[phone_num],incoming_msg,media_url,phone_num)
+    r,m,mediaFlag = process(Dict[phone_num],incoming_msg,media_url,phone_num,userName)
     # print(Dict[phone_num])
     if mediaFlag==0:
         msg.body(r)

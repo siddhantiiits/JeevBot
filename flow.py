@@ -9,7 +9,7 @@ import Animal_welfare
 
 suffix = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
 
-def process(l,incomingMsg,mediaurl,phonenum):
+def process(l,incomingMsg,mediaurl,phonenum,userName):
     suffixFlag = True
     mediaLink = ''
     mediaFlag = 0
@@ -256,7 +256,7 @@ def process(l,incomingMsg,mediaurl,phonenum):
         suffixFlag = False
     elif l[1:3] == ['6', '4'] and len(l) == 6:
         print(l[5])
-        r = Animal_welfare.animalWelfare(l[3],l[4],phonenum,'Test XYZ',l[5],l[5])
+        r = Animal_welfare.animalWelfare(l[3],l[4],phonenum,userName,l[5],l[5])
         suffixFlag = False
 
     # -------------------------Animal Welfare----------------------------
