@@ -27,8 +27,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
     # print(l)
 
     if incomingMsg == 'home':
+        lang_temp = l[0]
         l.clear()
-        l.append(l[0])
+        l.append(lang_temp)
     if incomingMsg == 'hindi':
         l[0] = 'hi'
     if incomingMsg == 'english':
@@ -351,9 +352,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
         r = functions.translate_text(r,destination_lang='hi')
 
     if len(l)==1 and l[0] == 'hi':
-        r += suffix_in_hindi
-    elif len(l)==1 and l[0] == 'en':
         r += suffix_in_english
+    elif len(l)==1 and l[0] == 'en':
+        r += suffix_in_hindi
 
     elif suffixFlag and l[0]=='hi':
         r += suffix_hin
