@@ -422,8 +422,8 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
 
 
     # Uncomment the code below
-    # if l[0] == 'hi':
-    #     r = r_hindi
+    if l[0] == 'hi':
+        r = r_hindi
 
 
 
