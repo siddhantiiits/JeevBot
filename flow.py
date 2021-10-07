@@ -12,7 +12,7 @@ suffix_in_english = '\n\nTo change the language in English, please type *English
 suffix_eng = '\n\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
 suffix_hin = '\n\nउपरोक्त विकल्पों में से विकल्प के अनुरूप संख्या टाइप करके चयन करें। \n\nमेन मेन्यू में जाने के लिए *home* टाइप करें। \nमुख्य मेनू पर जाने के लिए *home* टाइप करें।'
 def process(l,incomingMsg,mediaurl,phonenum,userName):
-    suffixFlag = True
+
     mediaLink = ''
     mediaFlag = 0
     # print(l)
@@ -57,7 +57,15 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*6.* General Services\n'+ suffix_in_hindi
 
 
-        r_hindi = 'All the above text in hindi' + suffix_in_english
+        r_hindi = 'अरे! क्या नंदी, मैं आपकी कैसे मदद कर सकता हूँ? क्या मैं पहले जान सकता हूँ कि दूसरी तरफ कौन है?\n\n' \
+            '*पशु चिकित्सा हॉटलाइन के लिए 0 टाइप करें*\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* पालतू मालिक\n' \
+            '*2.* पशुधन / कुक्कुट मालिक\n' \
+            '*3.* पैरा-पशु चिकित्सक\n' \
+            '*4.* पशु चिकित्सक\n' \
+            '*5.* विद्यार्थी\n' \
+            '*6.* सामान्य सेवाएं\n' + suffix_in_english
 
     # ----------------- Level 0 - End ---------------------
 
