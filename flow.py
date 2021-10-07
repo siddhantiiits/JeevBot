@@ -54,7 +54,10 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Para-Veterinarian\n' \
             '*4.* Veterinarian\n' \
             '*5.* Student\n' \
-            '*6.* General Services\n' \
+            '*6.* General Services\n'+ suffix_in_hindi
+
+
+        r_hindi = 'All the above text in hindi' + suffix_in_english
 
     # ----------------- Level 0 - End ---------------------
 
@@ -70,7 +73,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*4.* Guinea Pig 🐭\n' \
             '*5.* Birds 🦜\n' \
             '*6.* Fishes 🐟\n' \
-            '*7.* Other Exotic Species \n' \
+            '*7.* Other Exotic Species \n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['2']:
         r = 'Which pet do you own ?\n\n' \
@@ -83,6 +88,8 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*6.* Mithun 🐃\n' \
             '*7.* Yak\n' \
             '*8.* Poultry 🐓\n' \
+
+        r_hindi = 'All the above text in hindi'
 
     elif l[1:] == ['3']:
         r = 'Hey Vet!\nWhat do you want ?\n\n' \
@@ -348,26 +355,32 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
     else:
         r = 'Give a valid input please! 🥺'
         l.pop()
-        return r,'',0
-
-    if l[0] == 'hi':
-        r = functions.translate_text(r,destination_lang='hi')
-
-    if len(l)==1 and l[0] == 'hi':
-        r += suffix_in_english
-    elif len(l)==1 and l[0] == 'en':
-        r += suffix_in_hindi
-
-    elif suffixFlag and l[0]=='hi':
-        r += suffix_hin
-    elif suffixFlag and l[0]=='en':
-        r += suffix_eng
+        mediaLink = ''
+        mediaFlag = 0
 
 
 
+    #
+    # if l[0] == 'hi':
+    #     r = functions.translate_text(r,destination_lang='hi')
+    #
+    # if len(l)==1 and l[0] == 'hi':
+    #     r += suffix_in_english
+    # elif len(l)==1 and l[0] == 'en':
+    #     r += suffix_in_hindi
+    #
+    # elif suffixFlag and l[0]=='hi':
+    #     r += suffix_hin
+    # elif suffixFlag and l[0]=='en':
+    #     r += suffix_eng
 
-    # if l[0]=='hin':
-    #     r=e2h(r)
+
+
+    # Uncomment the code below
+    # if l[0] == 'hi':
+    #     r = r_hindi
+
+
 
     return r,mediaLink,mediaFlag
 
