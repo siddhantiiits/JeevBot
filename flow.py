@@ -31,9 +31,11 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
         l.clear()
         l.append(lang_temp)
     if incomingMsg == 'hindi':
-        l[0] = 'hi'
+        l.clear()
+        l.append('hi')
     if incomingMsg == 'english':
-        l[0] = 'en'
+        l.clear()
+        l.append('en')
     elif len(l) > 2 and incomingMsg == 'back':
         l.pop()
         l.pop()
