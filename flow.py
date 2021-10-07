@@ -7,10 +7,10 @@ import functions
 # incomingMsg is the incoming_msg
 
 
-suffix_in_hindi = '\n हिंदी में भाषा बदलने के लिए कृपया *hindi* टाइप करें'
-suffix_in_english = '\n To change the language in English, please type *English*'
-suffix_eng = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
-suffix_hin = 'उपरोक्त विकल्पों में से विकल्प के अनुरूप संख्या टाइप करके चयन करें। \n\nमेन मेन्यू में जाने के लिए *home* टाइप करें। \nिछले मेनू पर वापस जाने के लिए *back* टाइप करें।'
+suffix_in_hindi = '\n\nहिंदी में भाषा बदलने के लिए कृपया *hindi* टाइप करें'
+suffix_in_english = '\n\nTo change the language in English, please type *English*'
+suffix_eng = '\n\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
+suffix_hin = '\n\nउपरोक्त विकल्पों में से विकल्प के अनुरूप संख्या टाइप करके चयन करें। \n\nमेन मेन्यू में जाने के लिए *home* टाइप करें। \nमुख्य मेनू पर जाने के लिए *home* टाइप करें।'
 def process(l,incomingMsg,mediaurl,phonenum,userName):
     suffixFlag = True
     mediaLink = ''
