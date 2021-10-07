@@ -2,13 +2,15 @@ import requests
 import os
 import Registrations
 import Animal_welfare
+import functions
 # l is the list corresponding to Dict[phone_num]
 # incomingMsg is the incoming_msg
 
 
-
-suffix = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
-
+suffix_in_hindi = '\n हिंदी में भाषा बदलने के लिए कृपया *hindi* टाइप करें'
+suffix_in_english = '\n To change the language in English, please type *English*'
+suffix_eng = '\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
+suffix_hin = 'उपरोक्त विकल्पों में से विकल्प के अनुरूप संख्या टाइप करके चयन करें। \n\nमेन मेन्यू में जाने के लिए *home* टाइप करें। \nिछले मेनू पर वापस जाने के लिए *back* टाइप करें।'
 def process(l,incomingMsg,mediaurl,phonenum,userName):
     suffixFlag = True
     mediaLink = ''
@@ -16,7 +18,7 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
     # print(l)
     if incomingMsg:
         if l == []:
-            l.append('hin')
+            l.append('en')
         else:
             l.append(incomingMsg)
     else:
@@ -26,7 +28,11 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
 
     if incomingMsg == 'home':
         l.clear()
-        l.append('hin')
+        l.append(l[0])
+    if incomingMsg == 'hindi':
+        l[0] = 'hi'
+    if incomingMsg == 'english':
+        l[0] = 'en'
     elif len(l) > 2 and incomingMsg == 'back':
         l.pop()
         l.pop()
@@ -341,9 +347,19 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
         l.pop()
         return r,'',0
 
+    if l[0] == 'hi':
+        r = functions.translate_text(r,destination_lang='hi')
 
-    if suffixFlag:
-        r += suffix
+    if len(l)==1 and l[0] == 'hi':
+        r += suffix_in_hindi
+    elif len(l)==1 and l[0] == 'en':
+        r += suffix_in_english
+
+    elif suffixFlag and l[0]=='hi':
+        r += suffix_hin
+    elif suffixFlag and l[0]=='en':
+        r += suffix_eng
+
 
 
 
