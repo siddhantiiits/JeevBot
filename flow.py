@@ -87,26 +87,32 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*5.* Sheep and Goat 🐑\n' \
             '*6.* Mithun 🐃\n' \
             '*7.* Yak\n' \
-            '*8.* Poultry 🐓\n' \
+            '*8.* Poultry 🐓\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi'
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['3']:
         r = 'Hey Vet!\nWhat do you want ?\n\n' \
             'Please choose from the following options: \n\n' \
             '*1.* Want to Register yourself \n' \
-            '*2.* Want Vaccination and Deworming Handbook \n' \
+            '*2.* Want Vaccination and Deworming Handbook \n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['4']:
         r = 'Hey Vet!\nWhat do you want ?\n\n' \
             'Please choose from the following options: \n\n' \
             '*1.* Want to Register yourself \n' \
-            '*2.* Want Vaccination and Deworming Handbook \n' \
-        
+            '*2.* Want Vaccination and Deworming Handbook \n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
+
     elif l[1:] == ['5']:
         r = 'Hey Buddy!\nWhat do you want ?\n\n' \
             'Please choose from the following options: \n\n' \
-            '*1.* Want Vaccination and Deworming Handbook \n' \
+            '*1.* Want Vaccination and Deworming Handbook \n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
 
     elif l[1:] == ['6']:
@@ -117,7 +123,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Buy Pet \n' \
             '*4.* Anti-Animal Welfare Reporting \n' \
             '*5.* E-Platform for animal farmers \n' \
-            '*6.* Mobile Applications \n' \
+            '*6.* Mobile Applications \n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
             
 
     # ----------------- Level 1 - End ---------------------
@@ -135,7 +143,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*4.* Immunity Boosters 🍶\n' \
             '*5.* Boarding 🏡\n' \
             '*6.* Walking / Training \n' \
-            '*7.* FAQs ❓\n' \
+            '*7.* FAQs ❓\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['1','2']:
         r = 'What service / info do you want for your Cat? 🐈\n\n' \
@@ -145,7 +155,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Feed 🍲\n' \
             '*4.* Immunity Boosters 🍶\n' \
             '*5.* Boarding 🏡\n' \
-            '*6.* FAQs ❓\n' \
+            '*6.* FAQs ❓\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['1','3']:
         r = 'What service / info do you want for your Rabbit? 🐰\n\n' \
@@ -153,13 +165,17 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*1.* Vaccination 💉\n' \
             '*2.* Deworming 💊\n' \
             '*3.* Feed 🍲\n' \
-            '*4.* FAQs ❓\n' \
+            '*4.* FAQs ❓\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['1','4']:
         r = 'What service / info do you want for your Guinea Pig? 🐭\n\n' \
             'Please choose from the following options: \n\n' \
             '*1.* Feed 🍲\n' \
-            '*2.* FAQs ❓\n' \
+            '*2.* FAQs ❓\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['2','1']:
         r = 'What service / info do you want for your Cattle / Buffalo? 🐄\n\n' \
@@ -172,7 +188,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*6.* Animal Tagging \n' \
             '*7.* ETT \n' \
             '*8.* Sex Sorted Semen \n' \
-            '*9.* Semen Stations \n' \
+            '*9.* Semen Stations \n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['2','2']:
         r = 'What service / info do you want for your Pig? 🐖\n\n' \
@@ -180,7 +198,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*1.* Vaccination 💉\n' \
             '*2.* Deworming 💊\n' \
             '*3.* Feed 🍲\n' \
-            '*4.* Immunity and Health Boosters 🍶\n' \
+            '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['2','3']:
         r = 'What service / info do you want for your Horse? 🐎\n\n' \
@@ -188,7 +208,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*1.* Vaccination 💉\n' \
             '*2.* Deworming 💊\n' \
             '*3.* Feed 🍲\n' \
-            '*4.* Immunity and Health Boosters 🍶\n' \
+            '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['2','4']:
         r = 'What service / info do you want for your Camel? 🐪\n\n' \
@@ -196,7 +218,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*1.* Vaccination 💉\n' \
             '*2.* Deworming 💊\n' \
             '*3.* Feed 🍲\n' \
-            '*4.* Immunity and Health Boosters 🍶\n' \
+            '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['2','5']:
         r = 'What service / info do you want for your Sheep and Goat? 🐑\n\n' \
@@ -204,7 +228,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*1.* Vaccination 💉\n' \
             '*2.* Deworming 💊\n' \
             '*3.* Feed 🍲\n' \
-            '*4.* Immunity and Health Boosters 🍶\n' \
+            '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['2','6']:
         r = 'What service / info do you want for your Mithun? 🐃\n\n' \
@@ -212,7 +238,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*1.* Vaccination 💉\n' \
             '*2.* Deworming 💊\n' \
             '*3.* Feed 🍲\n' \
-            '*4.* Immunity and Health Boosters 🍶\n' \
+            '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['2','7']:
         r = 'What service / info do you want for your Yak? \n\n' \
@@ -220,7 +248,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*1.* Vaccination 💉\n' \
             '*2.* Deworming 💊\n' \
             '*3.* Feed 🍲\n' \
-            '*4.* Immunity and Health Boosters 🍶\n' \
+            '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['2','8']:
         r = 'What service / info do you want for your Poultry? 🐓\n\n' \
@@ -228,7 +258,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*1.* Vaccination 💉\n' \
             '*2.* Deworming 💊\n' \
             '*3.* Feed 🍲\n' \
-            '*4.* Immunity and Health Boosters 🍶\n' \
+            '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     elif l[1:] == ['4','1']:
         r = 'To get yourself registered as a veterinarian, fill the form {form link} or you can register by ' \
@@ -247,7 +279,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*221 Bakers Street*\n' \
             '*Mumbai*\n' \
             '*Maharashtra*\n' \
-            '*123456*\n\n' \
+            '*123456*\n\n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
 
     elif l[1:] == ['6','5']:
@@ -257,23 +291,30 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*2.* Kisan Sarthi \n' \
             '*3.* Kisan Mitr \n' \
             '*4.* Farmer Portal of India \n' \
-            '*5.* DAHD \n' \
+            '*5.* DAHD \n' + suffix_eng
+
+        r_hindi = 'All the above text in hindi' + suffix_hin
 
     # -------------------------Animal Welfare----------------------------
 
     elif l[1:] == ['6','4']:
         r= "*Send us an image depicting Animal abuse/ anti- animal welfare.* \n\n"
-        suffixFlag = False
+
+
+        r_hindi = 'All the above text in hindi'
+
     elif l[1:3] == ['6', '4'] and len(l) == 4:
         r = "*Thanks! Write a short description for the image you sent.*"
-        suffixFlag = False
+        r_hindi = 'All the above text in hindi'
     elif l[1:3] == ['6', '4'] and len(l) == 5:
         r = "Share the exact location of site, or type in exact address of site with pincode."
-        suffixFlag = False
+        r_hindi = 'All the above text in hindi'
     elif l[1:3] == ['6', '4'] and len(l) == 6:
         print(l[5])
-        r = Animal_welfare.animalWelfare(l[3],l[4],phonenum,userName,l[5],l[5])
-        suffixFlag = False
+        r,r_hindi = Animal_welfare.animalWelfare(l[3],l[4],phonenum,userName,l[5],l[5])
+
+
+    #     here func will return both r and r_hindi itself. No need to add here
 
     # -------------------------Animal Welfare----------------------------
 
@@ -318,19 +359,22 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
 
     elif l[1:] == ['1','1','1']:
         r = 'Here\'s the vaccination chart for your dog ! 🎉\n\n' \
-            'Nearest Vaccination Centers - *Feature Coming Soon\n*'
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r_hindi = 'All the above text in hindi' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
         mediaFlag = 1
 
     elif l[1:] == ['1','2','1']:
         r = 'Here\'s the vaccination chart for your cat ! 🎉\n\n' \
-            'Nearest Vaccination Centers - *Feature Coming Soon\n*'
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r_hindi = 'All the above text in hindi' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
         mediaFlag = 1
 
     elif l[1:] == ['1','3','1']:
         r = 'Here\'s the vaccination chart for your Rabbit ! 🎉\n\n' \
-            'Nearest Vaccination Centers - *Feature Coming Soon\n*'
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r_hindi = 'All the above text in hindi' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
         mediaFlag = 1
 
@@ -339,8 +383,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
         print(l[-1])
 
         name,registration_number,phone_number,address,city,state,pincode = map(str,l[-1].split('\n'))
-        r = Registrations.registerVeterinarian(name,registration_number,phone_number,address,city,state,pincode)
-        suffixFlag = False
+        r,r_hindi = Registrations.registerVeterinarian(name,registration_number,phone_number,address,city,state,pincode)
+
+        #     here func will return both r and r_hindi itself. No need to add here
 
 
 

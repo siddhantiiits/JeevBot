@@ -52,7 +52,7 @@ def animalWelfare(mediaUrl, imageDescription, userPhoneNumber, userName, pincode
     doc_ref.add({'Name':userName,'User Phone Number':userPhoneNumber,'Image URL': link,'Image Description':imageDescription ,
                  'Pincode':pincode, 'Location X-Coordinate':location[0],'Location Y-Coordinate':location[1]})
 
-    return 'Thanks for sharing with us, we are working on the same and trying to help ASAP. The '+content_type+' you uploaded is available at: '+blob.public_url + '\n\n'
+    return 'Thanks for sharing with us, we are working on the same and trying to help ASAP. The '+content_type+' you uploaded is available at: '+blob.public_url + '\n\n', "All this text in hindi"
 
 
 

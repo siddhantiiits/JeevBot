@@ -46,7 +46,7 @@ def registerVeterinarian(name, registrationNumber, phoneNumber, address, city, s
     doc_ref.add({'Name':name,'Registration Number':registrationNumber,'Phone Number': phoneNumber,'Address':address,
                  'City':city, 'State':state,'Pincode':pincode})
 
-    return 'Thanks for submission, *your registration will be confirmed by ' +registerDate +' '+current_time +'.*\n\n*If you wish to un-register yourself anytime. Mail us at nandi.development@gmail.com*\n\n'
+    return 'Thanks for submission, *your registration will be confirmed by ' +registerDate +' '+current_time +'.*\n\n*If you wish to un-register yourself anytime. Mail us at nandi.development@gmail.com*\n\n',"All this text in hindi"
 
 
 
