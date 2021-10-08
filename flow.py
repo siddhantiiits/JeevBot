@@ -7,9 +7,9 @@ import functions
 # incomingMsg is the incoming_msg
 
 
-suffix_in_hindi = '\n\nहिंदी में भाषा बदलने के लिए कृपया *hindi* टाइप करें'
-suffix_in_english = '\n\nTo change the language in English, please type *English*'
-suffix_in_punjabi = '\n\nਭਾਸ਼ਾ ਨੂੰ ਪੰਜਾਬੀ ਵਿੱਚ ਬਦਲਣ ਲਈ *punjabi* ਟਾਈਪ ਕਰੋ'
+suffix_in_hindi = '\nहिंदी में भाषा बदलने के लिए कृपया *hindi* टाइप करें'
+suffix_in_english = '\nTo change the language in English, please type *English*'
+suffix_in_punjabi = '\nਭਾਸ਼ਾ ਨੂੰ ਪੰਜਾਬੀ ਵਿੱਚ ਬਦਲਣ ਲਈ *punjabi* ਟਾਈਪ ਕਰੋ'
 suffix_eng = '\n\nSelect from the above options by typing number corresponding to the option.\n\nType *home* to go to main menu. \nType *back* to go back to previous menu.'
 suffix_hin = '\n\nउपरोक्त विकल्पों में से विकल्प के अनुरूप संख्या टाइप करके चयन करें। \n\nमेन मेन्यू में जाने के लिए *home* टाइप करें। \nपिछले मेनू पर जाने के लिए *back* टाइप करें।'
 suffix_punjabi = ' \n \n ਵਿਕਲਪ ਦੇ ਅਨੁਸਾਰੀ ਨੰਬਰ ਟਾਈਪ ਕਰਕੇ ਉਪਰੋਕਤ ਵਿਕਲਪਾਂ ਵਿੱਚੋਂ ਚੁਣੋ. \n\n ਮੁੱਖ ਮੀਨੂ ਤੇ ਜਾਣ ਲਈ *home* ਟਾਈਪ ਕਰੋ. \n ਪਿਛਲਾ ਮੀਨੂ ਤੇ ਜਾਣ ਲਈ *back* ਟਾਈਪ ਕਰੋ.'
@@ -80,7 +80,7 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '* 3.* ਪੈਰਾ-ਪਸ਼ੂ ਚਿਕਿਤਸਕ \n'\
             '* 4.* ਪਸ਼ੂ ਚਿਕਿਤਸਕ \n'\
             '* 5.* ਵਿਦਿਆਰਥੀ \n'\
-            '* 6.* ਆਮ ਸੇਵਾਵਾਂ n' + suffix_in_english+suffix_in_hindi
+            '* 6.* ਆਮ ਸੇਵਾਵਾਂ \n' + suffix_in_english+suffix_in_hindi
 
     # ----------------- Level 0 - End ---------------------
 
