@@ -379,13 +379,13 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
     # -------------------------Animal Welfare----------------------------
 
     elif l[1:] == ['6','4']:
-        r= "*Send us an image depicting Animal abuse/ anti- animal welfare.* \n\n"
+        r= "*Send us an image/ video depicting Animal abuse/ anti- animal welfare.* \n\n"
 
 
         r_hindi = 'All the above text in hindi'
 
     elif l[1:3] == ['6', '4'] and len(l) == 4:
-        r = "*Thanks! Write a short description for the image you sent.*"
+        r = "*Thanks! Write a short description for the image/ video you sent.*"
         r_hindi = 'All the above text in hindi'
     elif l[1:3] == ['6', '4'] and len(l) == 5:
         r = "Share the exact location of site, or type in exact address of site with pincode."
