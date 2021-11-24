@@ -367,12 +367,17 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
 
     elif l[1:] == ['6','5']:
         r = 'What E-Platform do you want to try? \n\n' \
-            'Please choose from the following options: \n\n' \
-            '*1.* E-Gopala \n' \
-            '*2.* Kisan Sarthi \n' \
-            '*3.* Kisan Mitr \n' \
-            '*4.* Farmer Portal of India \n' \
-            '*5.* DAHD \n' + suffix_eng
+            'Here\'s the List of all available platforms with their Links: \n\n' \
+            '*1.* E-Gopala ' \
+            '(https://play.google.com/store/apps/details?id=coop.nddb.pashuposhan&hl=en_IN&gl=US)\n'\
+            '*2.* Kisan Sarthi ' \
+            '(https://kisansarathi.in)\n'\
+            '*3.* Kisan Mitr ' \
+            '(https://kisanmitr.gov.in)\n'\
+            '*4.* Farmer Portal of India ' \
+            '(https://farmer.gov.in)\n'\
+            '*5.* DAHD '\
+            '(https://dahd.nic.in)\n' + suffix_eng
 
         r_hindi = 'All the above text in hindi' + suffix_hin
 
