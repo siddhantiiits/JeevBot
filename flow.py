@@ -443,26 +443,76 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
     # ----------------- Level 3 - Begin ---------------------
         # Update their charts location
 
+    elif l[1:] == ['2','1','1']:
+        r = 'Here\'s the vaccination chart 🎉\n\n' \
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r_hindi = 'All the above text in hindi' + suffix_hin
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_CattleandBuffalo.png?alt=media&token=6a75acdb-3544-42d2-be4f-ea89b6f5e50c'
+        mediaFlag = 1
+    elif l[1:] == ['2', '2', '1']:
+        r = 'Here\'s the vaccination chart 🎉\n\n' \
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r_hindi = 'All the above text in hindi' + suffix_hin
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Pig.png?alt=media&token=30a4fbd8-af25-4b3a-90e7-06ddec1a27eb'
+        mediaFlag = 1
+    elif l[1:] == ['2', '3', '1']:
+        r = 'Here\'s the vaccination chart 🎉\n\n' \
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r_hindi = 'All the above text in hindi' + suffix_hin
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Horse.png?alt=media&token=22192e19-e143-4d68-8bb1-3e5e127f9b8a'
+        mediaFlag = 1
+    elif l[1:] == ['2', '4', '1']:
+        r = 'Here\'s the vaccination chart 🎉\n\n' \
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r_hindi = 'All the above text in hindi' + suffix_hin
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Camel.png?alt=media&token=aecf6368-6b53-4b1c-881f-3fdc026c635e'
+        mediaFlag = 1
+    elif l[1:] == ['2', '5', '1']:
+        r = 'Here\'s the vaccination chart 🎉\n\n' \
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r_hindi = 'All the above text in hindi' + suffix_hin
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_SheepandGoat.png?alt=media&token=94081d27-eb30-4c12-ac58-d3b86ca02bfe'
+        mediaFlag = 1
+    elif l[1:] == ['2', '6', '1']:
+        r = 'Here\'s the vaccination chart🎉\n\n' \
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r_hindi = 'All the above text in hindi' + suffix_hin
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Mithun.png?alt=media&token=b71ef7ba-2245-4b09-87a3-a327a4db49df'
+        mediaFlag = 1
+    elif l[1:] == ['2', '7', '1']:
+        r = 'Here\'s the vaccination chart🎉\n\n' \
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r_hindi = 'All the above text in hindi' + suffix_hin
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Yak.png?alt=media&token=ccd0b9fc-789c-4cbc-9183-305ad0b675f9'
+        mediaFlag = 1
+    elif l[1:] == ['2', '8', '1']:
+        r = 'Vaccination Chart coming soon' \
+            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r_hindi = 'All the above text in hindi' + suffix_hin
+        # mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Dog.png?alt=media&token=48bd47c0-70b2-4a59-8851-a8857f99b999'
+        mediaFlag = 0
+
+
+
     elif l[1:] == ['1','1','1']:
         r = 'Here\'s the vaccination chart for your dog ! 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
         r_hindi = 'All the above text in hindi' + suffix_hin
-        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Dog.png?alt=media&token=48bd47c0-70b2-4a59-8851-a8857f99b999'
         mediaFlag = 1
 
     elif l[1:] == ['1','2','1']:
         r = 'Here\'s the vaccination chart for your cat ! 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
         r_hindi = 'All the above text in hindi' + suffix_hin
-        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Cat.png?alt=media&token=89e80cae-b922-42d9-9f72-4291672a9ffd'
         mediaFlag = 1
 
     elif l[1:] == ['1','3','1']:
-        r = 'Here\'s the vaccination chart for your Rabbit ! 🎉\n\n' \
-            'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
+        r = 'Coming Soon'
         r_hindi = 'All the above text in hindi' + suffix_hin
-        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
-        mediaFlag = 1
+        # mediaLink = 'https://firebasestorage.googleapis.com/v0/b/jeevbot.appspot.com/o/dogvcc.jpg?alt=media&token=b2e7e0d5-092f-436c-af20-ee7f0affd90c'
+        mediaFlag = 0
 
 
     elif l[1:-1] == ['4','1']:
