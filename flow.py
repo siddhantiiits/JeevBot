@@ -98,7 +98,15 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*6.* Fishes 🐟\n' \
             '*7.* Other Exotic Species \n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आपके पास कौन सा पालतू जानवर है?\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* कुत्ता 🐶\n' \
+            '*2.* बिल्ली 🐈\n' \
+            '*3.* खरगोश 🐰\n' \
+            '*4.* गिनी पिग \n' \
+            '*5.* पंछी \n' \
+            '*6.* मछलियाँ 🐟\n' \
+            '*7.* अन्य विदेशी प्रजातियां \n' + suffix_hin
 
     elif l[1:] == ['2']:
         r = 'Which animal do you own ?\n\n' \
@@ -155,7 +163,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             'Please choose from the following options: \n\n' \
             '*1.* Want Vaccination and Deworming Handbook \n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'अरे दोस्त!\nतुम क्या चाहते हो?\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* टीकाकरण और कृमि मुक्ति पुस्तिका \n' + suffix_hin
 
 
     elif l[1:] == ['6']:
@@ -204,7 +214,15 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*6.* Walking / Training \n' \
             '*7.* FAQs ❓\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप अपने कुत्ते के लिए कौन सी सेवा/जानकारी चाहते हैं? 🐶\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* टीकाकरण 💉\n' \
+            '*2.* कृमिनाशक 💊\n' \
+            '*3.* फ़ीड 🍲\n' \
+            '*4.* प्रतिरक्षा बूस्टर 🍶\n' \
+            '*5.* बोर्डिंग 🏡\n' \
+            '*6.* चलना/प्रशिक्षण \n' \
+            '*7.* अक्सर पूछे जाने वाले प्रश्न ❓\n' + suffix_hin
 
     elif l[1:] == ['1','2']:
         r = 'What service / info do you want for your Cat? 🐈\n\n' \
@@ -216,7 +234,14 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*5.* Boarding 🏡\n' \
             '*6.* FAQs ❓\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप अपनी बिल्ली के लिए कौन सी सेवा/जानकारी चाहते हैं? 🐈\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* टीकाकरण 💉\n' \
+            '*2.* कृमिनाशक 💊\n' \
+            '*3.* फ़ीड 🍲\n' \
+            '*4.* प्रतिरक्षा बूस्टर 🍶\n' \
+            '*5.* बोर्डिंग 🏡\n' \
+            '*6.* अक्सर पूछे जाने वाले प्रश्न ❓\n' + suffix_hin
 
     elif l[1:] == ['1','3']:
         r = 'What service / info do you want for your Rabbit? 🐰\n\n' \
@@ -226,7 +251,12 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Feed 🍲\n' \
             '*4.* FAQs ❓\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप अपने खरगोश के लिए कौन सी सेवा/जानकारी चाहते हैं? 🐰\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* टीकाकरण 💉\n' \
+            '*2.* कृमिनाशक 💊\n' \
+            '*3.* फ़ीड 🍲\n' \
+            '*4.* अक्सर पूछे जाने वाले प्रश्न ❓\n' + suffix_hin
 
     elif l[1:] == ['1','4']:
         r = 'What service / info do you want for your Guinea Pig? 🐭\n\n' \
@@ -234,7 +264,10 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*1.* Feed 🍲\n' \
             '*2.* FAQs ❓\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप अपने गिनी पिग के लिए कौन सी सेवा/जानकारी चाहते हैं? 🐭\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* फ़ीड 🍲\n' \
+            '*2.* अक्सर पूछे जाने वाले प्रश्न ❓\n' + suffix_hin
 
     elif l[1:] == ['2','1']:
         r = 'What service / info do you want for your Cattle / Buffalo? 🐄\n\n' \
@@ -281,7 +314,12 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Feed 🍲\n' \
             '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप अपने सूकर के लिए कौन सी सेवा/जानकारी चाहते हैं? 🐖\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* टीकाकरण 💉\n' \
+            '*2.* कृमिनाशक \n' \
+            '*3.* फ़ीड 🍲\n' \
+            '*4.* प्रतिरक्षा और स्वास्थ्य बूस्टर 🍶\n' + suffix_hin
 
     elif l[1:] == ['2','3']:
         r = 'What service / info do you want for your Horse? 🐎\n\n' \
@@ -291,7 +329,12 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Feed 🍲\n' \
             '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप अपने घोड़े के लिए कौन सी सेवा/जानकारी चाहते हैं? 🐎\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* टीकाकरण 💉\n' \
+            '*2.* कृमिनाशक \n' \
+            '*3.* फ़ीड 🍲\n' \
+            '*4.* प्रतिरक्षा और स्वास्थ्य बूस्टर 🍶\n' + suffix_hin
 
     elif l[1:] == ['2','4']:
         r = 'What service / info do you want for your Camel? 🐪\n\n' \
@@ -301,7 +344,12 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Feed 🍲\n' \
             '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप अपने ऊंट के लिए कौन सी सेवा/जानकारी चाहते हैं? 🐪\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* टीकाकरण 💉\n' \
+            '*2.* कृमिनाशक \n' \
+            '*3.* फ़ीड 🍲\n' \
+            '*4.* प्रतिरक्षा और स्वास्थ्य बूस्टर 🍶\n' + suffix_hin
 
     elif l[1:] == ['2','5']:
         r = 'What service / info do you want for your Sheep and Goat? 🐑\n\n' \
@@ -311,7 +359,12 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Feed 🍲\n' \
             '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप अपनी भेड़ और बकरी के लिए क्या सेवा/जानकारी चाहते हैं? 🐑\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* टीकाकरण 💉\n' \
+            '*2.* कृमिनाशक \n' \
+            '*3.* फ़ीड 🍲\n' \
+            '*4.* प्रतिरक्षा और स्वास्थ्य बूस्टर 🍶\n' + suffix_hin
 
     elif l[1:] == ['2','6']:
         r = 'What service / info do you want for your Mithun? 🐃\n\n' \
@@ -321,7 +374,12 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Feed 🍲\n' \
             '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप अपने मिथुन के लिए कौन सी सेवा/जानकारी चाहते हैं? 🐃\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* टीकाकरण 💉\n' \
+            '*2.* कृमिनाशक \n' \
+            '*3.* फ़ीड 🍲\n' \
+            '*4.* प्रतिरक्षा और स्वास्थ्य बूस्टर 🍶\n' + suffix_hin
 
     elif l[1:] == ['2','7']:
         r = 'What service / info do you want for your Yak? \n\n' \
@@ -331,7 +389,12 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Feed 🍲\n' \
             '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप अपने याक के लिए क्या सेवा/जानकारी चाहते हैं? \n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* टीकाकरण 💉\n' \
+            '*2.* कृमिनाशक \n' \
+            '*3.* फ़ीड 🍲\n' \
+            '*4.* प्रतिरक्षा और स्वास्थ्य बूस्टर 🍶\n' + suffix_hin
 
     elif l[1:] == ['2','8']:
         r = 'What service / info do you want for your Poultry? 🐓\n\n' \
@@ -341,7 +404,12 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Feed 🍲\n' \
             '*4.* Immunity and Health Boosters 🍶\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप अपने पोल्ट्री के लिए कौन सी सेवा/जानकारी चाहते हैं? 🐓\n\n' \
+            'कृपया निम्नलिखित विकल्पों में से चुनें: \n\n' \
+            '*1.* टीकाकरण 💉\n' \
+            '*2.* कृमिनाशक \n' \
+            '*3.* फ़ीड 🍲\n' \
+            '*4.* प्रतिरक्षा और स्वास्थ्य बूस्टर 🍶\n' + suffix_hin
 
     elif l[1:] == ['4','1']:
         r = 'To get yourself registered as a veterinarian, fill the form {form link} or you can register by ' \
@@ -362,39 +430,73 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*Maharashtra*\n' \
             '*123456*\n\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'स्वयं को पशु चिकित्सक के रूप में पंजीकृत कराने के लिए, फॉर्म {फॉर्म लिंक} भरें या ' \
+            'आप इस प्रारूप में अपना विवरण भेजकर पंजीकरण कर सकते हैं:\n\n'\
+            'आपका नाम\n' \
+            'पंजीकरण संख्या\n' \
+            'फ़ोन नंबर\n' \
+            'पता\n' \
+            'शहर\n' \
+            'राज्य\n' \
+            'पिनकोड\n\n' \
+            'उदाहरण के लिए: \n' \
+            '*शर्लक होम्स*\n' \
+            '*पीसीवीईटी54वाईजेड3498*\n' \
+            '*+9120392949393*\n' \
+            '*221 बेकर्स स्ट्रीट*\n' \
+            '*मुंबई*\n' \
+            '*महाराष्ट्र*\n' \
+            '*123456*\n\n' + suffix_hin
 
 
     elif l[1:] == ['6','5']:
         r = 'What E-Platform do you want to try? \n\n' \
             'Here\'s the List of all available platforms with their Links: \n\n' \
-            '*1.* E-Gopala ' \
-            '(https://play.google.com/store/apps/details?id=coop.nddb.pashuposhan&hl=en_IN&gl=US)\n'\
-            '*2.* Kisan Sarthi ' \
+            '*1.* Kisan Sarthi ' \
             '(https://kisansarathi.in)\n'\
-            '*3.* Kisan Mitr ' \
+            '*2.* Kisan Mitr ' \
             '(https://kisanmitr.gov.in)\n'\
-            '*4.* Farmer Portal of India ' \
+            '*3.* Farmer Portal of India ' \
             '(https://farmer.gov.in)\n'\
-            '*5.* DAHD '\
+            '*4.* DAHD '\
             '(https://dahd.nic.in)\n' + suffix_eng
 
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'आप कौन सा ई-प्लेटफ़ॉर्म आज़माना चाहते हैं? \n\n' \
+            'यहाँ\'उनके लिंक के साथ सभी उपलब्ध प्लेटफ़ॉर्म की सूची: \n\n' \
+            '*1.* किसान सारथी' \
+            '(https://kisansarathi.in)\n'\
+            '*2.* किसान मित्र' \
+            '(https://kisanmitr.gov.in)\n'\
+            '*3.* भारत का किसान पोर्टल' \
+            '(https://farmer.gov.in)\n'\
+            '*4.* डीएएचडी'\
+            '(https://dahd.nic.in)\n' + suffix_hin
+
+    elif l[1:] == ['6','6']:
+        r = 'What Mobile Application do you want to try? \n\n' \
+            'Here\'s the List of all available apps with their Links: \n\n' \
+            '*1.* E-Gopala ' \
+            '(https://play.google.com/store/apps/details?id=coop.nddb.pashuposhan&hl=en_IN&gl=US)\n'  + suffix_eng
+
+        r_hindi = 'आप कौन सा मोबाइल एप्लिकेशन आजमाना चाहते हैं? \n\n' \
+            'यहां सभी उपलब्ध ऐप्स की सूची उनके लिंक के साथ है: \n\n' \
+            '*1.* ई-गोपाल' \
+            '(https://play.google.com/store/apps/details?id=coop.nddb.pashuposhan&hl=hi_IN&gl=US)\n' + suffix_hin
+
 
     # -------------------------Animal Welfare----------------------------
 
     elif l[1:] == ['6','4']:
         r= "*Send us an image/ video depicting Animal abuse/ anti- animal welfare.* \n\n"
 
-
-        r_hindi = 'All the above text in hindi'
+        r_hindi = "*हमें पशु दुर्व्यवहार/पशु-विरोधी कल्याण को दर्शाने वाली एक छवि/वीडियो भेजें।* \n\n"
 
     elif l[1:3] == ['6', '4'] and len(l) == 4:
         r = "*Thanks! Write a short description for the image/ video you sent.*"
-        r_hindi = 'All the above text in hindi'
+        r_hindi = "*धन्यवाद! आपके द्वारा भेजी गई छवि/वीडियो के लिए एक संक्षिप्त विवरण लिखें।*"
     elif l[1:3] == ['6', '4'] and len(l) == 5:
         r = "Share the exact location of site, or type in exact address of site with pincode."
-        r_hindi = 'All the above text in hindi'
+        r_hindi = "साइट का सटीक स्थान साझा करें, या पिनकोड के साथ साइट का सटीक पता लिखें।"
     elif l[1:3] == ['6', '4'] and len(l) == 6:
         print(l[5])
         r,r_hindi = Animal_welfare.animalWelfare(l[3],l[4],phonenum,userName,l[5],l[5])
@@ -446,49 +548,57 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
     elif l[1:] == ['2','1','1']:
         r = 'Here\'s the vaccination chart 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'ये रहा टीकाकरण चार्ट 🎉\n\n' \
+            'निकटतम टीकाकरण केंद्र - *सुविधा जल्द आ रही है\n*' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_CattleandBuffalo.png?alt=media&token=6a75acdb-3544-42d2-be4f-ea89b6f5e50c'
         mediaFlag = 1
     elif l[1:] == ['2', '2', '1']:
         r = 'Here\'s the vaccination chart 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'ये रहा टीकाकरण चार्ट 🎉\n\n' \
+            'निकटतम टीकाकरण केंद्र - *सुविधा जल्द आ रही है\n*' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Pig.png?alt=media&token=30a4fbd8-af25-4b3a-90e7-06ddec1a27eb'
         mediaFlag = 1
     elif l[1:] == ['2', '3', '1']:
         r = 'Here\'s the vaccination chart 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'ये रहा टीकाकरण चार्ट 🎉\n\n' \
+            'निकटतम टीकाकरण केंद्र - *सुविधा जल्द आ रही है\n*' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Horse.png?alt=media&token=22192e19-e143-4d68-8bb1-3e5e127f9b8a'
         mediaFlag = 1
     elif l[1:] == ['2', '4', '1']:
         r = 'Here\'s the vaccination chart 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'ये रहा टीकाकरण चार्ट 🎉\n\n' \
+            'निकटतम टीकाकरण केंद्र - *सुविधा जल्द आ रही है\n*' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Camel.png?alt=media&token=aecf6368-6b53-4b1c-881f-3fdc026c635e'
         mediaFlag = 1
     elif l[1:] == ['2', '5', '1']:
         r = 'Here\'s the vaccination chart 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'ये रहा टीकाकरण चार्ट 🎉\n\n' \
+            'निकटतम टीकाकरण केंद्र - *सुविधा जल्द आ रही है\n*' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_SheepandGoat.png?alt=media&token=94081d27-eb30-4c12-ac58-d3b86ca02bfe'
         mediaFlag = 1
     elif l[1:] == ['2', '6', '1']:
         r = 'Here\'s the vaccination chart🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'ये रहा टीकाकरण चार्ट 🎉\n\n' \
+            'निकटतम टीकाकरण केंद्र - *सुविधा जल्द आ रही है\n*' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Mithun.png?alt=media&token=b71ef7ba-2245-4b09-87a3-a327a4db49df'
         mediaFlag = 1
     elif l[1:] == ['2', '7', '1']:
         r = 'Here\'s the vaccination chart🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'ये रहा टीकाकरण चार्ट 🎉\n\n' \
+            'निकटतम टीकाकरण केंद्र - *सुविधा जल्द आ रही है\n*' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Yak.png?alt=media&token=ccd0b9fc-789c-4cbc-9183-305ad0b675f9'
         mediaFlag = 1
     elif l[1:] == ['2', '8', '1']:
         r = 'Vaccination Chart coming soon' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'ये रहा टीकाकरण चार्ट 🎉\n\n' \
+            'निकटतम टीकाकरण केंद्र - *सुविधा जल्द आ रही है\n*' + suffix_hin
         # mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Dog.png?alt=media&token=48bd47c0-70b2-4a59-8851-a8857f99b999'
         mediaFlag = 0
 
@@ -497,14 +607,16 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
     elif l[1:] == ['1','1','1']:
         r = 'Here\'s the vaccination chart for your dog ! 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'ये रहा आपके कुत्ते के लिए टीकाकरण चार्ट ! 🎉\n\n' \
+            'निकटतम टीकाकरण केंद्र - *सुविधा जल्द आ रही है\n*' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Dog.png?alt=media&token=48bd47c0-70b2-4a59-8851-a8857f99b999'
         mediaFlag = 1
 
     elif l[1:] == ['1','2','1']:
         r = 'Here\'s the vaccination chart for your cat ! 🎉\n\n' \
             'Nearest Vaccination Centers - *Feature Coming Soon\n*' + suffix_eng
-        r_hindi = 'All the above text in hindi' + suffix_hin
+        r_hindi = 'ये रहा आपकी बिल्ली के लिए टीकाकरण चार्ट ! 🎉\n\n' \
+            'निकटतम टीकाकरण केंद्र - *सुविधा जल्द आ रही है\n*' + suffix_hin
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccinationChart_Cat.png?alt=media&token=89e80cae-b922-42d9-9f72-4291672a9ffd'
         mediaFlag = 1
 
