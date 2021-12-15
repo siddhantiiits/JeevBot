@@ -483,7 +483,7 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*1.* ई-गोपाल' \
             '(https://play.google.com/store/apps/details?id=coop.nddb.pashuposhan&hl=hi_IN&gl=US)\n' + suffix_hin
 
-    elif l[1] == ['5', '1']:
+    elif l[1:] in ( ['5', '1'], ['4','2'],['3','2']):
         r = 'Here is your vaccination Guide \n\n' + suffix_eng
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccination_Handbook.pdf?alt=media&token=4044d13e-3691-4e86-9ef6-c4e6f023bb79'
         r_hindi = 'ये है आपकी टीकाकरण गाइड \n\n' + suffix_hin
