@@ -501,6 +501,14 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
         print(l[5])
         r,r_hindi = Animal_welfare.animalWelfare(l[3],l[4],phonenum,userName,l[5],l[5])
 
+    elif l[1] == ['5', '1'] or l[1] == ['3','2'] or l[1] == ['4','2']:
+        r = 'Here is your vaccination Guide \n\n'
+        mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccination_Handbook.pdf?alt=media&token=4044d13e-3691-4e86-9ef6-c4e6f023bb79'
+        r_hindi = 'ये है आपकी टीकाकरण गाइड \n\n'
+        mediaFlag = 1
+
+
+
 
     #     here func will return both r and r_hindi itself. No need to add here
 
