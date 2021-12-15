@@ -206,7 +206,7 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             'कृपया खोलें \n\n' \
             'https://nandi-bot.ml/registration.html \n'  + suffix_hin
 
-        r_punjabi = 'ਆਪਣੇ ਆਪ ਨੂੰ ਨੰਦੀ ਨਾਲ ਰਜਿਸਟਰ ਕਰਨ ਲਈ\n\n'\ 
+        r_punjabi = 'ਆਪਣੇ ਆਪ ਨੂੰ ਨੰਦੀ ਨਾਲ ਰਜਿਸਟਰ ਕਰਨ ਲਈ\n\n'\
             'ਕਿਰਪਾ ਕਰਕੇ ਖੋਲ੍ਹੋ \n\n' \
             'https://nandi-bot.ml/registration.html \n'  + suffix_punjabi
             
