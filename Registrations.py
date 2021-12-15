@@ -5,7 +5,7 @@ from datetime import date, timedelta , time, datetime
 
 from firebase_admin import credentials, initialize_app, storage, firestore
 
-def registerVeterinarian(name, registrationNumber, phoneNumber, address, city, state, pincode ):
+def registerVeterinarian(who,name, registrationNumber, phoneNumber, address, city, state, pincode ):
 
     tomorrow = date.today() + timedelta(days = 1)
     tomorrow = date.today() + timedelta(days=1)
@@ -41,8 +41,13 @@ def registerVeterinarian(name, registrationNumber, phoneNumber, address, city, s
 
 
     store = firestore.client()
+    if who == 'vet':
+        collectionID = u'Registered Veterinarians'
+    elif who == 'paravet':
+        collectionID = u'Registered Para-Veterinarians'
 
-    doc_ref = store.collection(u'Registered Veterinarians')
+
+    doc_ref = store.collection(collectionID)
     doc_ref.add({'Name':name,'Registration Number':registrationNumber,'Phone Number': phoneNumber,'Address':address,
                  'City':city, 'State':state,'Pincode':pincode})
 

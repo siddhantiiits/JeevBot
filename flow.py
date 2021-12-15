@@ -59,7 +59,8 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* Para-Veterinarian\n' \
             '*4.* Veterinarian\n' \
             '*5.* Student\n' \
-            '*6.* General Services\n'+ suffix_in_hindi+suffix_in_punjabi
+            '*6.* General Services\n' \
+            '*7.* Service Provider Registration'+ suffix_in_hindi+suffix_in_punjabi
 
 
         r_hindi = 'नमस्कार! मैं हूँ नंदी। मैं आपकी किस प्रसार सहायता कर सकता हूं? क्या मैं जान सकता हूं आप कौन हैं?\n\n' \
@@ -195,6 +196,19 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*4.* ਪਸ਼ੂ ਦੁਰਵਿਹਾਰ ਦੀ ਰਿਪੋਰਟਿੰਗ \n'\
             '*5.* ਪਸ਼ੂ ਪਾਲਕਾਂ ਲਈ ਈ-ਪਲੇਟਫਾਰਮ \n'\
             '*6.* ਮੋਬਾਈਲ ਐਪਲੀਕੇਸ਼ਨ \n' + suffix_punjabi
+    elif l[1:] == ['7']:
+        r = 'To get yourself registered with Nandi\n\n' \
+            'Kindly visit \n\n' \
+            'https://nandi-bot.ml/registration.html \n' \
+             + suffix_eng
+
+        r_hindi = 'नंदी के साथ खुद को पंजीकृत कराने के लिए\n\n' \
+            'कृपया खोलें \n\n' \
+            'https://nandi-bot.ml/registration.html \n'  + suffix_hin
+
+        r_punjabi = 'ਆਪਣੇ ਆਪ ਨੂੰ ਨੰਦੀ ਨਾਲ ਰਜਿਸਟਰ ਕਰਨ ਲਈ\n\n'\ 
+            'ਕਿਰਪਾ ਕਰਕੇ ਖੋਲ੍ਹੋ \n\n' \
+            'https://nandi-bot.ml/registration.html \n'  + suffix_punjabi
             
 
     # ----------------- Level 1 - End ---------------------
@@ -411,8 +425,8 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*3.* फ़ीड 🍲\n' \
             '*4.* प्रतिरक्षा और स्वास्थ्य बूस्टर 🍶\n' + suffix_hin
 
-    elif l[1:] == ['4','1']:
-        r = 'To get yourself registered as a veterinarian, fill the form {form link} or you can register by ' \
+    elif l[1:] in (['4','1'],['3','1']):
+        r = 'To get yourself registered , fill the form https://nandi-bot.ml/registration.html or you can register by ' \
             'sending your details in this format: \n\n' \
             'Your Name\n' \
             'Registration Number\n' \
@@ -428,7 +442,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*221 Bakers Street*\n' \
             '*Mumbai*\n' \
             '*Maharashtra*\n' \
-            '*123456*\n\n' + suffix_eng
+            '*123456*\n\n' \
+            '*If you do not have a registration number, type \'NA\''
+        + suffix_eng
 
         r_hindi = 'स्वयं को पशु चिकित्सक के रूप में पंजीकृत कराने के लिए, फॉर्म {फॉर्म लिंक} भरें या ' \
             'आप इस प्रारूप में अपना विवरण भेजकर पंजीकरण कर सकते हैं:\n\n'\
@@ -641,7 +657,14 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
         print(l[-1])
 
         name,registration_number,phone_number,address,city,state,pincode = map(str,l[-1].split('\n'))
-        r,r_hindi = Registrations.registerVeterinarian(name,registration_number,phone_number,address,city,state,pincode)
+        r,r_hindi = Registrations.registerVeterinarian('vet',name,registration_number,phone_number,address,city,state,pincode)
+
+        #     here func will return both r and r_hindi itself. No need to add here
+    elif l[1:-1] == ['5','1']:
+        print(l[-1])
+
+        name,registration_number,phone_number,address,city,state,pincode = map(str,l[-1].split('\n'))
+        r,r_hindi = Registrations.registerVeterinarian('paravet',name,registration_number,phone_number,address,city,state,pincode)
 
         #     here func will return both r and r_hindi itself. No need to add here
 
