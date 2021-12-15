@@ -483,10 +483,10 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*1.* ई-गोपाल' \
             '(https://play.google.com/store/apps/details?id=coop.nddb.pashuposhan&hl=hi_IN&gl=US)\n' + suffix_hin
 
-    elif l[1] == ['5', '1'] or l[1] == ['3','2'] or l[1] == ['4','2']:
-        r = 'Here is your vaccination Guide \n\n'
+    elif l[1] == ['5', '1']:
+        r = 'Here is your vaccination Guide \n\n' + suffix_eng
         mediaLink = 'https://firebasestorage.googleapis.com/v0/b/nandi-2adc2.appspot.com/o/Vaccination_Charts%2FVaccination_Handbook.pdf?alt=media&token=4044d13e-3691-4e86-9ef6-c4e6f023bb79'
-        r_hindi = 'ये है आपकी टीकाकरण गाइड \n\n'
+        r_hindi = 'ये है आपकी टीकाकरण गाइड \n\n' + suffix_hin
         mediaFlag = 1
 
     # -------------------------Animal Welfare----------------------------
@@ -656,7 +656,7 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
 
 
     else:
-        r = 'Give a valid input please! 🥺'
+        r = 'You have either entered an invalid response or this feature is under development'
         l.pop()
         mediaLink = ''
         mediaFlag = 0
