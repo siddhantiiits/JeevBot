@@ -87,6 +87,9 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
 
     # ----------------- Level 1 - Begin ---------------------
 
+    elif l[1:] == ['0']:
+        pass
+    # TODO: vet hotline func that collect image saves it to firestore then calls nearest vet function
 
     elif l[1:] == ['1']:
         r = 'Which pet do you own ?\n\n' \
@@ -443,8 +446,7 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*Mumbai*\n' \
             '*Maharashtra*\n' \
             '*123456*\n\n' \
-            '*If you do not have a registration number, type \'NA\''
-        + suffix_eng
+            '*If you do not have a registration number, type \'NA\'' + suffix_eng
 
         r_hindi = 'स्वयं को पशु चिकित्सक के रूप में पंजीकृत कराने के लिए, फॉर्म {फॉर्म लिंक} भरें या ' \
             'आप इस प्रारूप में अपना विवरण भेजकर पंजीकरण कर सकते हैं:\n\n'\
