@@ -47,7 +47,7 @@ def registerVeterinarian(who,name, registrationNumber, phoneNumber, address, cit
         collectionID = u'Registered Para-Veterinarians'
 
 
-    doc_ref = store.collection(u'Registered Veterinarians')
+    doc_ref = store.collection(collectionID)
     doc_ref.add({'Name':name,'Registration Number':registrationNumber,'Phone Number': phoneNumber,'Address':address,
                  'City':city, 'State':state,'Pincode':pincode})
 

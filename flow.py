@@ -60,7 +60,7 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
             '*4.* Veterinarian\n' \
             '*5.* Student\n' \
             '*6.* General Services\n' \
-            '*7.* Service Provider Registration'+ suffix_in_hindi+suffix_in_punjabi
+            '*7.* Service Provider Registration\n'+ suffix_in_hindi+suffix_in_punjabi
 
 
         r_hindi = 'नमस्कार! मैं हूँ नंदी। मैं आपकी किस प्रसार सहायता कर सकता हूं? क्या मैं जान सकता हूं आप कौन हैं?\n\n' \
@@ -660,7 +660,7 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
         r,r_hindi = Registrations.registerVeterinarian('vet',name,registration_number,phone_number,address,city,state,pincode)
 
         #     here func will return both r and r_hindi itself. No need to add here
-    elif l[1:-1] == ['5','1']:
+    elif l[1:-1] == ['3','1']:
         print(l[-1])
 
         name,registration_number,phone_number,address,city,state,pincode = map(str,l[-1].split('\n'))
