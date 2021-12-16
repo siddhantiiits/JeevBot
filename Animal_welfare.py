@@ -7,7 +7,7 @@ import urllib
 
 from firebase_admin import credentials, initialize_app, storage, firestore
 
-def animalWelfare(mediaUrl, imageDescription, userPhoneNumber, userName, pincode, location ):
+def animalWelfare(mediaUrl, imageDescription, userPhoneNumber, userName, address, location ):
     print(mediaUrl)
     # headers = {'Content-type': 'content_type_value'}
 
@@ -50,7 +50,7 @@ def animalWelfare(mediaUrl, imageDescription, userPhoneNumber, userName, pincode
 
     doc_ref = store.collection(u'AnimalWelfare')
     doc_ref.add({'Name':userName,'User Phone Number':userPhoneNumber,'Image URL': link,'Image Description':imageDescription ,
-                 'Pincode':pincode, 'Location X-Coordinate':location[0],'Location Y-Coordinate':location[1]})
+                 'Address':pincode, 'Location X-Coordinate':location[0],'Location Y-Coordinate':location[1],'DropDown':'Status','complaintStatus':'Open','Remarks':'NA'})
 
     return 'Thanks for sharing with us, we are working on the same and trying to help ASAP. The '+content_type+' you uploaded is available at: '+blob.public_url + '\n\n', 'हमारे साथ साझा करने के लिए धन्यवाद, हम इस पर काम कर रहे हैं और त्वरित मदद करने की कोशिश कर रहे हैं। आपके द्वारा अपलोड किया गया चित्र/वीडियो यहां उपलब्ध है:'+blob.public_url + '\n\n'
 
