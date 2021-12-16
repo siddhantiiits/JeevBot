@@ -50,7 +50,7 @@ def animalWelfare(mediaUrl, imageDescription, userPhoneNumber, userName, address
 
     doc_ref = store.collection(u'AnimalWelfare')
     doc_ref.add({'Name':userName,'User Phone Number':userPhoneNumber,'Image URL': link,'Image Description':imageDescription ,
-                 'Location':pincode, 'Location X-Coordinate':location[0],'Location Y-Coordinate':location[1],'status':'Not seen yet','finalStatus':'active','remarks':'NA'})
+                 'address':address, 'Location X-Coordinate':location[0],'Location Y-Coordinate':location[1],'status':'Not seen yet','finalStatus':'active','remarks':'NA'})
 
     return 'Thanks for sharing with us, we are working on the same and trying to help ASAP. The '+content_type+' you uploaded is available at: '+blob.public_url + '\n\n', 'हमारे साथ साझा करने के लिए धन्यवाद, हम इस पर काम कर रहे हैं और त्वरित मदद करने की कोशिश कर रहे हैं। आपके द्वारा अपलोड किया गया चित्र/वीडियो यहां उपलब्ध है:'+blob.public_url + '\n\n'
 
