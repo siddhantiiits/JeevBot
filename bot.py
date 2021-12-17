@@ -7,6 +7,7 @@ from varDump import emptyDictFile
 
 
 
+
 app = Flask(__name__)
 #
 # l=[]
@@ -86,6 +87,7 @@ def bot():
         pickle.dump(Dict, file)
         print("Dumped")
         print(Dict)
+
 
 
 

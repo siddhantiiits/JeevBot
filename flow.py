@@ -5,6 +5,7 @@ import Animal_welfare
 import functions
 # l is the list corresponding to Dict[phone_num]
 # incomingMsg is the incoming_msg
+import Disease_Reporting
 
 
 suffix_in_hindi = '\nहिंदी में भाषा बदलने के लिए कृपया *hindi* टाइप करें'
@@ -88,7 +89,16 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
     # ----------------- Level 1 - Begin ---------------------
 
     elif l[1:] == ['0']:
-        pass
+        r = 'Please describe the issue. What animal is it and what symptoms you are facing ?'
+    elif l[1:2] == ['0'] and len(l) == 3:
+        r = 'Location support is coming soon. But, you need not to wait. ' \
+            'Please send the pin code you are currently at! Example : 123456 '
+    elif l[1:2] == ['0'] and len(l) == 4:
+        r = 'Thankyou! We are sending you the list of veterinarians near you.\n' \
+            'Could you please share picture/video of your animal showing symptoms.\n' \
+            'This will help us make Nandi better !'
+    elif l[1:2] == ['0'] and len(l) == 5:
+        r= Disease_Reporting.diseaseReporting(userName,phonenum,l[2],l[3],l[4])
     # TODO: vet hotline func that collect image saves it to firestore then calls nearest vet function
 
     elif l[1:] == ['1']:
