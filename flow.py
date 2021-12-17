@@ -681,7 +681,8 @@ def process(l,incomingMsg,mediaurl,phonenum,userName):
 
 
     else:
-        r = 'You have either entered an invalid response or this feature is under development'
+        r = 'Our team is currently working on this. Please return back some time! \n' \
+            'We regret the inconvenience caused. Thanks for your patience 😊'
         l.pop()
         mediaLink = ''
         mediaFlag = 0
