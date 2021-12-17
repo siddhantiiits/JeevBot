@@ -3,6 +3,7 @@ import firebase_admin
 import google.cloud
 import urllib
 import Nearest_Vet
+import validators
 
 
 
@@ -46,7 +47,7 @@ def diseaseReporting(userName,userPhoneNumber,symptoms,pincode,photo):
     link = blob.public_url #image uploaded to firebase storage and link to image stored in 'link'
     print(link)
 
-    try:
+    if validators.url(symptoms):
         response = requests.get(symptoms)
         req = urllib.request.Request(symptoms, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
         r = urllib.request.urlopen(req)
@@ -78,7 +79,7 @@ def diseaseReporting(userName,userPhoneNumber,symptoms,pincode,photo):
         blob.make_public()
         symptoms = blob.public_url  # image uploaded to firebase storage and link to image stored in 'link'
         print(symptoms)
-    except requests.ConnectionError as exception:
+    else:
         pass
 
 
