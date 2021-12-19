@@ -11,7 +11,9 @@ from firebase_admin import credentials, initialize_app, storage, firestore
 def nearestVet(pincode):
 
     cred = credentials.Certificate("nandi-2adc2-firebase-adminsdk-4gdo7-2838d71565.json")
-    firebase_admin.initialize_app(cred)
+    if not firebase_admin._apps:
+        firebase_admin.initialize_app(cred)
+
     db = firestore.client()
     leftRange = pincode[:3] + '000'
     rightRange = str(int(pincode[:3])+1) +'000'
