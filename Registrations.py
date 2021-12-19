@@ -48,8 +48,8 @@ def registerVeterinarian(who,name, registrationNumber, phoneNumber, address, cit
 
 
     doc_ref = store.collection(collectionID)
-    doc_ref.add({'Name':name,'Registration Number':registrationNumber,'Phone Number': phoneNumber,'Address':address,
-                 'City':city, 'State':state,'Pincode':pincode})
+    doc_ref.add({'name':name,'registration_no':registrationNumber,'phone': phoneNumber,'address':address,
+                 'city':city, 'state':state,'pincode':pincode})
 
     return 'Thanks for submission, *your registration will be confirmed by ' +registerDate +' '+current_time +'.*\n\n*If you wish to un-register yourself anytime. Mail us at nandi.development@gmail.com*\n\n', 'सबमिट करने के लिए धन्यवाद, *आपके पंजीकरण की पुष्टि  ' +registerDate +' '+current_time +' बजे तक हो जाएगी।* .\n\n*यदि आप किसी भी समय अपना पंजीकरण रद्द करना चाहते हैं, तो हमें nandi.Develop@gmail.com पर मेल करें*'
 
