@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Nandi Bot</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+    <link rel="stylesheet" href="css/A.style.css.pagespeed.cf._PLmzbS5dC.css">
+</head>
+
+<body>
+    <header role="banner">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand absolute" href="index.html">NANDI</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+                <div class="collapse navbar-collapse" id="navbarsExample05">
+                    <ul class="navbar-nav mx-auto pl-lg-5 pl-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li> -->
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Register</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                <a class="dropdown-item" href="registration.html">Veterinarian</a>
+                                <a class="dropdown-item" href="registration.html">Para-Veterinarian</a>
+                                <a class="dropdown-item" href="registration.html">Boarder</a>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">Policy</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link " href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bug.html">Report a Bug (Contribute)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <section class="home-slider inner-page owl-carousel">
+        <div class="slider-item" style="background-image:url(img/xslider-1.jpg.pagespeed.ic.9yixjU5KZV.webp)">
+            <div class="container">
+                <div class="row slider-text align-items-center justify-content-center">
+                    <div class="col-md-8 text-center col-sm-12 element-animate">
+                        <h1>Registration</h1>
+                        <p class="mb-5">Get yourself registered!</p>
+                        <!-- <p><a href="#" class="btn btn-white btn-outline-white">Explore</a></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- <div class="half d-md-flex d-block">
+            <div class="image" style="background-image:url(img/xslider-1.jpg.pagespeed.ic.9yixjU5KZV.webp)"></div>
+            <div class="text text-center element-animate">
+                <span>Februrary 27, 2018</span>
+                <h3 class="mb-4">How To Train Your Dog</h3>
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis tempora inventore, aliquam ratione. Eum vero sapiente tempora eveniet perspiciatis libero, omnis quae facilis! Voluptatibus minima autem, esse eius natus labore.</p>
+                <p><a href="#" class="btn btn-primary btn-sm">Continue Reading</a></p>
+            </div>
+        </div> -->
+        <div class="half d-md-flex d-block">
+            <div class="container"><div class="row">
+            <div class="col-md-6 mb-5 order-2">
+                <br><br>
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="whoami">I'm a</label>
+                            <select class="form-control" id="whoami">
+                                <option value="Veterinarian" >Veterinarian</option>
+                                <option value="Para-Veterinarian">Para-Veterinarian</option>
+                                <option value="Boarder">Boarder</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-6 form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control ">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" class="form-control ">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="registration_no">Registration No.</label>
+                            <input type="text" id="registration_no" class="form-control ">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="address">Address</label>
+                            <textarea name="address" id="address" class="form-control " cols="30" rows="2"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="pincode">Pincode</label>
+                            <input type="number" id="pincode" class="form-control ">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" class="form-control " readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" class="form-control " readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <!-- <button id="submit_msg" type="button">Submit</button> -->
+                            <input type="submit_formm" id="submit_formm" value="Register" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="image order-2" style="background-image:url(img/xslider-2.jpg.pagespeed.ic.z9yz_1vCd2.webp)"></div></div></div>
+        </div>
+        
+    </section>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="row mb-5">
+                <!-- <div class="col-md-4 mb-5">
+                    <h3>Nandi</h3>
+                    <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus et dolor blanditiis consequuntur ex voluptates perspiciatis omnis unde minima expedita.</p>
+                    <ul class="list-unstyled footer-link d-flex footer-social">
+                        <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
+                        <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
+                        <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+                    </ul>
+                </div> -->
+                <div class="col-md-5 mb-5">
+                    <h3>Contact Info</h3>
+                    <ul class="list-unstyled footer-link">
+                        <li class="d-block">
+                            <span class="d-block">Address:</span>
+                            <span class="text-white">Bareilly, Uttar Pradesh<br></span>
+                            <span class="text-white">Barnala, Punjab</span>
+                        </li>
+                        <li class="d-block"><span class="d-block">Telephone:</span><span class="text-white">+91 8923719301<br>+91 8198000795</span></li>
+                        <li class="d-block"><span class="d-block">Email:</span><span class="text-white"><a href="mailto:nandi.development@gmail.com" class="__cf_email__" data-cfemail="f990979f96b980968c8b9d9694989097d79a9694">nandi.development@gmail.com</a></span></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled footer-link">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Disclaimers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <img src="img/nandi-logo.png" alt="Image placeholder" class="img-fluid">
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-12 text-md-center text-left">
+
+                    <p>Copyright &copy;
+                        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js+bootstrap.min.js.pagespeed.jc.TD5telXvTC.js"></script>
+    <script>
+        eval(mod_pagespeed_2j_fA6bcLL);
+    </script>
+    <script>
+        eval(mod_pagespeed_XIaigKgGZt);
+    </script>
+    <script src="js/owl.carousel.min.js+jquery.waypoints.min.js+main.js.pagespeed.jc.E1Z3dxJA5p.js"></script>
+    <script>
+        eval(mod_pagespeed_lpqeL5sxK7);
+    </script>
+    <script>
+        eval(mod_pagespeed_9puTFkEgdV);
+    </script>
+    <script>
+        eval(mod_pagespeed_QcP7yu_SH7);
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"69343ebc2dab2cd4","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.8.1","si":10}'></script>
+</body>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+<script type="text/javascript">
+
+    $("#pincode").keyup(function() {
+        console.log('hiii');
+        var el = $(this);
+
+        if ((el.val().length == 6) ) { //&& (is_int(el.val()))
+            console.log('hiii-inside');
+            $.ajax({
+            url: "https://api.postalpincode.in/pincode/"+el.val(),
+            cache: false,
+            dataType: "json",
+            type: "GET",
+            // data: "zip=" + el.val(),
+            success: function(result, success){
+                if(result[0].PostOffice==null){
+                    $("#pincode").val('');
+                    $("#city").val('');
+                    $("#state").val('');
+                    alert('Please enter a valid Pincode.');
+                }
+                else{
+                    $("#city").val(result[0].PostOffice[0].District);
+                    $("#state").val(result[0].PostOffice[0].State);
+                }
+            }
+            });
+        }
+    });
+
+</script>
+<script type="text/javascript">
+    (function() {
+      var firebaseConfig = {
+        apiKey: "AIzaSyAGNxJ4Emfg54ls4rnbFDrz79GUM0OMbbA",
+        authDomain: "nandi-2adc2.firebaseapp.com",
+        databaseURL: "https://nandi-2adc2-default-rtdb.firebaseio.com",
+        projectId: "nandi-2adc2",
+        storageBucket: "nandi-2adc2.appspot.com",
+        messagingSenderId: "1041001071112",
+        appId: "1:1041001071112:web:4daafda108e3347b9007bd",
+        measurementId: "G-Q2PVVTLNM7"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+
+      var push_to_firebase = function(data){
+        alert("Thanks for sending a message. I'll try and get back to you as soon as possible.")
+        var db = firebase.firestore();
+
+        if(data["whoami"]=="Veterinarian"){
+            db.collection("Registered Veterinarians").add({
+                name: data["name"],
+                phone: data["phone"],
+                registration_no: data["registration_no"],
+                address: data["address"],
+                city: data["city"],
+                state: data["state"],
+                pincode: data["pincode"],
+                timestamp: Date.now()
+            })
+            .then(function(docRef) {
+                console.log("Message sent, ID: ", docRef.id);
+                location.reload();
+            })
+            .catch(function(error) {
+                console.error("Message could not be sent: ", error);
+            });
+        }
+        else if(data["whoami"]=="Para-Veterinarian"){
+            db.collection("Registered Para-Veterinarians").add({
+                name: data["name"],
+                phone: data["phone"],
+                registration_no: data["registration_no"],
+                address: data["address"],
+                city: data["city"],
+                state: data["state"],
+                pincode: data["pincode"],
+                timestamp: Date.now()
+            })
+            .then(function(docRef) {
+                console.log("Message sent, ID: ", docRef.id);
+                location.reload();
+            })
+            .catch(function(error) {
+                console.error("Message could not be sent: ", error);
+            });
+        }
+        else if(data["whoami"]=="Boarder"){
+            db.collection("Registered Boarders").add({
+                name: data["name"],
+                phone: data["phone"],
+                registration_no: data["registration_no"],
+                address: data["address"],
+                city: data["city"],
+                state: data["state"],
+                pincode: data["pincode"],
+                timestamp: Date.now()
+            })
+            .then(function(docRef) {
+                console.log("Message sent, ID: ", docRef.id);
+                location.reload();
+            })
+            .catch(function(error) {
+                console.error("Message could not be sent: ", error);
+            });
+        }
+      }
+
+      var contact_submit = function(){
+        var name = document.getElementById("name");
+        var phone = document.getElementById("phone");
+        var registration_no = document.getElementById("registration_no");
+        var address = document.getElementById("address");
+        var city = document.getElementById("city");
+        var state = document.getElementById("state");
+        var pincode = document.getElementById("pincode");
+        var whoami = document.getElementById("whoami");
+
+        var data = {
+          "name": name.value,
+          "phone": phone.value,
+          "registration_no": registration_no.value,
+          "address": address.value,
+          "city": city.value,
+          "state": state.value,
+          "pincode": pincode.value,
+          "whoami": whoami.value
+        }
+        // console.log(data);
+        push_to_firebase(data);
+
+      }
+
+      document.getElementById("submit_formm").addEventListener("click", contact_submit);
+    })();
+  </script>
+
+</html>
